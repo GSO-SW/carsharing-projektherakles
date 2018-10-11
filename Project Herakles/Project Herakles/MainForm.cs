@@ -18,6 +18,8 @@ namespace Project_Herakles
             InitializeComponent();
             DBController DBC = new DBController();
             DBC.ConnectToLocalDb();
+            //Kunde K = new Kunde();
+            //K.Fill
         }
     }
 }
