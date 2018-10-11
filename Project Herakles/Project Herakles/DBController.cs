@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace Project_Herakles
@@ -22,6 +23,7 @@ namespace Project_Herakles
                 {
                     // open connection to database
                     con.Open();
+                    MessageBox.Show("Verbindung Hergestellt");
                     // INTERACTION WITH DATABASE COMES HERE
                 }
                 catch (Exception e)

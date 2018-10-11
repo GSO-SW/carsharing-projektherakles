@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Project_Herakles
 {
     public partial class MainForm : Form
@@ -15,6 +16,8 @@ namespace Project_Herakles
         public MainForm()
         {
             InitializeComponent();
+            DBController DBC = new DBController();
+            DBC.ConnectToLocalDb();
         }
     }
 }
