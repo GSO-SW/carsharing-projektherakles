@@ -18,7 +18,7 @@ namespace Project_Herakles
         string Passwort;
 
        
-            void FillDbUser(string name)
+            internal void FillDbUser(string name)
             {
             Name = name;
                 using (MySqlDataAdapter a = new MySqlDataAdapter(
