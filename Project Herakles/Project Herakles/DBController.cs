@@ -14,6 +14,8 @@ namespace Project_Herakles
         // set connection string to my local sql server database
         // can be retrieved from the database connection properties in the Server-Explorer
         string connectionString = @"host=localhost;user=root;database=carsharingdb";
+        string sql = "SELECT * FROM Kunde WHERE KundenNr = 1";
+        
         internal void ConnectToLocalDb()
         {
             // create SqlConnection object
@@ -25,6 +27,15 @@ namespace Project_Herakles
                     con.Open();
                     MessageBox.Show("Verbindung Hergestellt");
                     // INTERACTION WITH DATABASE COMES HERE
+                    
+                    
+daCountry = new MySqlDataAdapter (sql, conn);
+                    using (MySqlDataAdapter test = new MySqlDataAdapter (sql, conn))
+{
+ // Use DataAdapter to fill Dataset
+                    DataSet t = new DataSet();
+                    test.Fill(t, /*Tabelle(z.b.)*/ Kunde);
+}
                 }
                 catch (Exception e)
                 {
