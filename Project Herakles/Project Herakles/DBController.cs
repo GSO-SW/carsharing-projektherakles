@@ -12,30 +12,7 @@ namespace Project_Herakles
     {
         string connectionString = @"host=localhost;user=root;database=carsharingdb";
 
-        internal void ConnectToDb()
-        {
-            // create SqlConnection object
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-                    MessageBox.Show("Verbindung Hergestellt");
-                    // INTERACTION WITH DATABASE COMES HERE
-                }
-                catch (Exception e)
-                {
-                    throw e;
-                }
-                finally
-                {
-
-                    // close connection from database
-                    connection.Close();
-                }
-
-            }
-        }
+       
         internal void InsertInToKunde(string Name, int TelefonNr, string EMail, string Adresse, DateTime Geburtsdatum, string Passwort)
         {
             // create SqlConnection object
@@ -83,6 +60,36 @@ namespace Project_Herakles
                     using (MySqlCommand command = new MySqlCommand("UPDATE Kunde SET Kunde  = @VeränderterWert WHERE Name = @UrsprungsName", connection))
                     {   /*Datenbank Tabellen attribut Name ist das 1. das 2. ist der variablen name*/
                         command.Parameters.Add(new MySqlParameter("VeränderterWert", NewValue));
+                        command.Parameters.Add(new MySqlParameter("UrsprungsName", UrsprungsName));
+                        command.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+                finally
+                {
+
+                    // close connection from database
+                    connection.Close();
+                }
+
+            }
+        }
+
+        internal void DeleteKunde(string UrsprungsName)
+        {
+            // create SqlConnection object
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    MessageBox.Show("Verbindung Hergestellt");
+
+                    using (MySqlCommand command = new MySqlCommand("DELETE FROM Kunde WHERE Name = @UrsprungsName", connection))
+                    {   /*Datenbank Tabellen attribut Name ist das 1. das 2. ist der variablen name*/
                         command.Parameters.Add(new MySqlParameter("UrsprungsName", UrsprungsName));
                         command.ExecuteNonQuery();
                     }

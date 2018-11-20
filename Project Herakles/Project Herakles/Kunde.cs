@@ -29,6 +29,12 @@ namespace Project_Herakles
             DBC.UpdateToKunde(Name,NewValue);
             MessageBox.Show("Kunde wurde in der Datenbank aktualisiert");
         }
+        internal void UserLöschen(string Name)
+        {
+            DBController DBC = new DBController();
+            DBC.DeleteKunde(Name);
+            MessageBox.Show("Kunde wurde in der Datenbank gelöscht");
+        }
     }
 }
 
