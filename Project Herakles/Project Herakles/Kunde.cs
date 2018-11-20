@@ -1,10 +1,10 @@
-using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Project_Herakles
 {
@@ -19,11 +19,10 @@ namespace Project_Herakles
 
         internal void UserHinzufügen()
         {
-            using (DBController DBC = new DBController())
-            {
-                DBC.InsertInToKunde(Name, TelefonNr, EMail, Adresse, Geburtsdatum, Passwort);
-            }
-            
+            DBController DBC = new DBController();
+            DBC.InsertInToKunde(Name, TelefonNr, EMail, Adresse, Geburtsdatum, Passwort);
+            MessageBox.Show("Kunde zur Datenbank hinzugefügt");
+
         }
     }
 }
