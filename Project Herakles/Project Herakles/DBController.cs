@@ -47,7 +47,7 @@ namespace Project_Herakles
 
             }
         }
-        internal void UpdateToKunde(string UrsprungsName, string NewValue)
+        internal void UpdateDB(string Table, string Column, string UrsprungsName, string NewValue)
         {
             // create SqlConnection object
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -57,8 +57,10 @@ namespace Project_Herakles
                     connection.Open();
                     MessageBox.Show("Verbindung Hergestellt");
 
-                    using (MySqlCommand command = new MySqlCommand("UPDATE Kunde SET Kunde  = @VeränderterWert WHERE Name = @UrsprungsName", connection))
+                    using (MySqlCommand command = new MySqlCommand("UPDATE @Table SET @Column  = @VeränderterWert WHERE Name = @UrsprungsName", connection))
                     {   /*Datenbank Tabellen attribut Name ist das 1. das 2. ist der variablen name*/
+                        command.Parameters.Add(new MySqlParameter("Table", Table));
+                        command.Parameters.Add(new MySqlParameter("Column", Column));
                         command.Parameters.Add(new MySqlParameter("VeränderterWert", NewValue));
                         command.Parameters.Add(new MySqlParameter("UrsprungsName", UrsprungsName));
                         command.ExecuteNonQuery();
@@ -78,7 +80,7 @@ namespace Project_Herakles
             }
         }
 
-        internal void DeleteKunde(string UrsprungsName)
+        internal void DeleteFromDB(string Table,string Column,string UniqueValue)
         {
             // create SqlConnection object
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -88,9 +90,11 @@ namespace Project_Herakles
                     connection.Open();
                     MessageBox.Show("Verbindung Hergestellt");
 
-                    using (MySqlCommand command = new MySqlCommand("DELETE FROM Kunde WHERE Name = @UrsprungsName", connection))
+                    using (MySqlCommand command = new MySqlCommand("DELETE FROM @Table WHERE @Column = @UniqueValue", connection))
                     {   /*Datenbank Tabellen attribut Name ist das 1. das 2. ist der variablen name*/
-                        command.Parameters.Add(new MySqlParameter("UrsprungsName", UrsprungsName));
+                        command.Parameters.Add(new MySqlParameter("Table", Table));
+                        command.Parameters.Add(new MySqlParameter("Column", Column));
+                        command.Parameters.Add(new MySqlParameter("UniqueValue", UniqueValue));
                         command.ExecuteNonQuery();
                     }
                 }

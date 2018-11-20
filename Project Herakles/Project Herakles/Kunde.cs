@@ -23,16 +23,16 @@ namespace Project_Herakles
             DBC.InsertInToKunde(Name, TelefonNr, EMail, Adresse, Geburtsdatum, Passwort);
             MessageBox.Show("Kunde zur Datenbank hinzugefügt");
         }
-        internal void UserBearbeiten(string Name, string NewValue)
+        internal void UserBearbeiten(string Spalte,string Name, string NewValue)
         {
             DBController DBC = new DBController();
-            DBC.UpdateToKunde(Name,NewValue);
+            DBC.UpdateDB("Kunde",Spalte,Name,NewValue);
             MessageBox.Show("Kunde wurde in der Datenbank aktualisiert");
         }
         internal void UserLöschen(string Name)
         {
             DBController DBC = new DBController();
-            DBC.DeleteKunde(Name);
+            DBC.DeleteFromDB("Kunde", "Name", Name);
             MessageBox.Show("Kunde wurde in der Datenbank gelöscht");
         }
     }
