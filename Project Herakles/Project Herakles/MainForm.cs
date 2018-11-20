@@ -16,10 +16,6 @@ namespace Project_Herakles
         public MainForm()
         {
             InitializeComponent();
-            DBController DBC = new DBController();
-            DBC.ConnectToLocalDb();
-            DBC.ConnectToDb();
-
         }
     }
 }

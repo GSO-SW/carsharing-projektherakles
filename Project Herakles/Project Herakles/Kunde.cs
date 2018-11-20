@@ -17,20 +17,13 @@ namespace Project_Herakles
         DateTime Geburtsdatum;
         string Passwort;
 
-       
-            internal void FillDbUser(string name)
+        internal void UserHinzufügen()
+        {
+            using (DBController DBC = new DBController())
             {
-            Name = name;
-                using (MySqlDataAdapter a = new MySqlDataAdapter(
- "SELECT Name FROM ", Name))
-                {
-                    // Use DataAdapter to fill DataTable
-                    DataTable t = new DataTable();
-                    a.Fill(t);
-                }
-
+                DBC.InsertInToKunde(Name, TelefonNr, EMail, Adresse, Geburtsdatum, Passwort);
             }
-        }
+            
         }
     }
 }
