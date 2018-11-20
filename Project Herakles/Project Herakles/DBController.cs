@@ -10,32 +10,18 @@ namespace Project_Herakles
 {
     class DBController
     {
-
-        // set connection string to my local sql server database
-        // can be retrieved from the database connection properties in the Server-Explorer
         string connectionString = @"host=localhost;user=root;database=carsharingdb";
-        string sql = "SELECT * FROM Kunde WHERE KundenNr = 1";
-        
-        internal void ConnectToLocalDb()
+
+        internal void ConnectToDb()
         {
             // create SqlConnection object
-            using (MySqlConnection con = new MySqlConnection(connectionString))
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 try
                 {
-                    // open connection to database
-                    con.Open();
+                    connection.Open();
                     MessageBox.Show("Verbindung Hergestellt");
                     // INTERACTION WITH DATABASE COMES HERE
-                    
-                    
-daCountry = new MySqlDataAdapter (sql, conn);
-                    using (MySqlDataAdapter test = new MySqlDataAdapter (sql, conn))
-{
- // Use DataAdapter to fill Dataset
-                    DataSet t = new DataSet();
-                    test.Fill(t, /*Tabelle(z.b.)*/ Kunde);
-}
                 }
                 catch (Exception e)
                 {
@@ -43,12 +29,12 @@ daCountry = new MySqlDataAdapter (sql, conn);
                 }
                 finally
                 {
-                    // close connection to database
-                    con.Close();
+
+                    // close connection from database
+                    connection.Close();
                 }
 
             }
         }
     }
 }
-        

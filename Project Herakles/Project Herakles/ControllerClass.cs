@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project_Herakles
 {
-    class Buchung
+    class ControllerClass
     {
     }
 }

@@ -8,6 +8,5 @@ namespace Project_Herakles
 {
     class Fahrzeug
     {
-
     }
 }
