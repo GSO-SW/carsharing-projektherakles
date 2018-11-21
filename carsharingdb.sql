@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 21. Nov 2018 um 15:30
--- Server-Version: 10.1.35-MariaDB
--- PHP-Version: 7.2.9
+-- Erstellungszeit: 21. Nov 2018 um 15:42
+-- Server-Version: 10.1.37-MariaDB
+-- PHP-Version: 7.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -151,6 +151,7 @@ ALTER TABLE `kreditkarte`
 -- Indizes für die Tabelle `paypal`
 --
 ALTER TABLE `paypal`
+  ADD PRIMARY KEY (`PaypalAccountID`),
   ADD UNIQUE KEY `ZahlungID` (`ZahlungID`);
 
 --
@@ -180,6 +181,36 @@ ALTER TABLE `zahlung`
 --
 
 --
+-- AUTO_INCREMENT für Tabelle `fahrt`
+--
+ALTER TABLE `fahrt`
+  MODIFY `FahrtID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `fahrzeug`
+--
+ALTER TABLE `fahrzeug`
+  MODIFY `FahrzeugID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `kreditkarte`
+--
+ALTER TABLE `kreditkarte`
+  MODIFY `KreditkarteID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `paypal`
+--
+ALTER TABLE `paypal`
+  MODIFY `PaypalAccountID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `rechte`
+--
+ALTER TABLE `rechte`
+  MODIFY `RechteID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT für Tabelle `user`
 --
 ALTER TABLE `user`
@@ -193,8 +224,8 @@ ALTER TABLE `user`
 -- Constraints der Tabelle `fahrt`
 --
 ALTER TABLE `fahrt`
-  ADD CONSTRAINT `fahrt_ibfk_1` FOREIGN KEY (`FahrzeugID`) REFERENCES `fahrzeug` (`FahrzeugID`),
-  ADD CONSTRAINT `fahrt_ibfk_2` FOREIGN KEY (`AccountID`) REFERENCES `user` (`AccountID`);
+  ADD CONSTRAINT `fahrt_ibfk_2` FOREIGN KEY (`AccountID`) REFERENCES `user` (`AccountID`),
+  ADD CONSTRAINT `fahrt_ibfk_3` FOREIGN KEY (`FahrzeugID`) REFERENCES `fahrzeug` (`FahrzeugID`);
 
 --
 -- Constraints der Tabelle `paypal`
