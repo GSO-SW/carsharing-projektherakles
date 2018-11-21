@@ -17,7 +17,7 @@ namespace Project_Herakles
         DateTime Geburtsdatum;
         string Passwort;
 
-        internal void UserHinzufügen()
+        internal void UserHinzufügen(string Name, int TelefonNr,string EMail,string Adresse,DateTime Geburtsdatum,string Passwort)
         {
             DBController DBC = new DBController();
             DBC.InsertInToKunde(Name, TelefonNr, EMail, Adresse, Geburtsdatum, Passwort);

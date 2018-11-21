@@ -23,8 +23,9 @@ namespace Project_Herakles
                     connection.Open();
                     MessageBox.Show("Verbindung Hergestellt");
 
-                    using (MySqlCommand command = new MySqlCommand("INSERT INTO Kunde VALUES(@Name, @TelefonNr, @EMail, @Adresse, @Geburtsdatum, @Passwort)", connection))
+                    using (MySqlCommand command = new MySqlCommand("INSERT INTO user VALUES(@RechteID, @Name, @TelefonNr, @EMail, @Adresse, @Geburtsdatum, @Passwort)", connection))
                     {   /*Datenbank Tabellen attribut Name ist das 1. das 2. ist der variablen name*/
+                        command.Parameters.Add(new MySqlParameter("RechteID", 1));
                         command.Parameters.Add(new MySqlParameter("Name", Name));
                         command.Parameters.Add(new MySqlParameter("TelefonNr", TelefonNr));
                         command.Parameters.Add(new MySqlParameter("EMail", EMail));
