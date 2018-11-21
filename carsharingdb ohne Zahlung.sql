@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 21. Nov 2018 um 16:03
+-- Erstellungszeit: 21. Nov 2018 um 17:24
 -- Server-Version: 10.1.37-MariaDB
 -- PHP-Version: 7.2.12
 
@@ -59,32 +59,6 @@ CREATE TABLE `fahrzeug` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `kreditkarte`
---
-
-CREATE TABLE `kreditkarte` (
-  `KreditkarteID` int(11) NOT NULL,
-  `Kontoinhaber` int(11) NOT NULL,
-  `KartenNr` int(11) NOT NULL,
-  `Auslaufdatum` date NOT NULL,
-  `ZahlungID` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
-
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `paypal`
---
-
-CREATE TABLE `paypal` (
-  `PaypalAccountID` int(11) NOT NULL,
-  `LoginMail` text COLLATE latin1_german1_ci NOT NULL,
-  `ZahlungID` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
-
--- --------------------------------------------------------
-
---
 -- Tabellenstruktur für Tabelle `rechte`
 --
 
@@ -92,6 +66,13 @@ CREATE TABLE `rechte` (
   `RechteID` int(11) NOT NULL,
   `Name` text COLLATE latin1_german1_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
+
+--
+-- Daten für Tabelle `rechte`
+--
+
+INSERT INTO `rechte` (`RechteID`, `Name`) VALUES
+(1, 'User');
 
 -- --------------------------------------------------------
 
@@ -106,19 +87,7 @@ CREATE TABLE `user` (
   `TelefonNr` int(11) NOT NULL,
   `E-Mail` char(100) COLLATE latin1_german1_ci NOT NULL,
   `Adresse` char(100) COLLATE latin1_german1_ci NOT NULL,
-  `ZahlungsID` int(11) NOT NULL,
   `Passwort` char(100) COLLATE latin1_german1_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
-
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `zahlung`
---
-
-CREATE TABLE `zahlung` (
-  `ZahlungID` int(11) NOT NULL,
-  `TypName` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
 
 --
@@ -140,20 +109,6 @@ ALTER TABLE `fahrzeug`
   ADD PRIMARY KEY (`FahrzeugID`);
 
 --
--- Indizes für die Tabelle `kreditkarte`
---
-ALTER TABLE `kreditkarte`
-  ADD PRIMARY KEY (`KreditkarteID`),
-  ADD UNIQUE KEY `ZahlungID` (`ZahlungID`);
-
---
--- Indizes für die Tabelle `paypal`
---
-ALTER TABLE `paypal`
-  ADD PRIMARY KEY (`PaypalAccountID`),
-  ADD UNIQUE KEY `ZahlungID` (`ZahlungID`);
-
---
 -- Indizes für die Tabelle `rechte`
 --
 ALTER TABLE `rechte`
@@ -165,15 +120,8 @@ ALTER TABLE `rechte`
 ALTER TABLE `user`
   ADD PRIMARY KEY (`AccountID`),
   ADD UNIQUE KEY `RechteID` (`RechteID`),
-  ADD UNIQUE KEY `ZahlungsID` (`ZahlungsID`),
-  ADD UNIQUE KEY `RechteID_2` (`RechteID`,`ZahlungsID`),
-  ADD UNIQUE KEY `RechteID_3` (`RechteID`,`ZahlungsID`);
-
---
--- Indizes für die Tabelle `zahlung`
---
-ALTER TABLE `zahlung`
-  ADD PRIMARY KEY (`ZahlungID`);
+  ADD UNIQUE KEY `RechteID_2` (`RechteID`),
+  ADD UNIQUE KEY `RechteID_3` (`RechteID`);
 
 --
 -- AUTO_INCREMENT für exportierte Tabellen
@@ -192,28 +140,16 @@ ALTER TABLE `fahrzeug`
   MODIFY `FahrzeugID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT für Tabelle `kreditkarte`
---
-ALTER TABLE `kreditkarte`
-  MODIFY `KreditkarteID` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT für Tabelle `paypal`
---
-ALTER TABLE `paypal`
-  MODIFY `PaypalAccountID` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT für Tabelle `rechte`
 --
 ALTER TABLE `rechte`
-  MODIFY `RechteID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `RechteID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT für Tabelle `user`
 --
 ALTER TABLE `user`
-  MODIFY `AccountID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `AccountID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints der exportierten Tabellen
@@ -227,23 +163,10 @@ ALTER TABLE `fahrt`
   ADD CONSTRAINT `fahrt_ibfk_3` FOREIGN KEY (`FahrzeugID`) REFERENCES `fahrzeug` (`FahrzeugID`);
 
 --
--- Constraints der Tabelle `paypal`
---
-ALTER TABLE `paypal`
-  ADD CONSTRAINT `paypal_ibfk_1` FOREIGN KEY (`ZahlungID`) REFERENCES `zahlung` (`ZahlungID`);
-
---
 -- Constraints der Tabelle `user`
 --
 ALTER TABLE `user`
-  ADD CONSTRAINT `user_ibfk_2` FOREIGN KEY (`ZahlungsID`) REFERENCES `zahlung` (`ZahlungID`),
   ADD CONSTRAINT `user_ibfk_3` FOREIGN KEY (`RechteID`) REFERENCES `rechte` (`RechteID`);
-
---
--- Constraints der Tabelle `zahlung`
---
-ALTER TABLE `zahlung`
-  ADD CONSTRAINT `zahlung_ibfk_1` FOREIGN KEY (`ZahlungID`) REFERENCES `kreditkarte` (`ZahlungID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

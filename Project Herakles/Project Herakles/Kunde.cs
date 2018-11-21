@@ -14,13 +14,12 @@ namespace Project_Herakles
         int TelefonNr;
         string EMail;
         string Adresse;
-        DateTime Geburtsdatum;
         string Passwort;
 
-        internal void UserHinzufügen()
+        internal void UserHinzufügen(string Name, int TelefonNr,string EMail,string Adresse,string Passwort)
         {
             DBController DBC = new DBController();
-            DBC.InsertInToKunde(Name, TelefonNr, EMail, Adresse, Geburtsdatum, Passwort);
+            DBC.InsertInToKunde(Name, TelefonNr, EMail, Adresse, Passwort);
             MessageBox.Show("Kunde zur Datenbank hinzugefügt");
         }
         internal void UserBearbeiten(string Spalte,string Name, string NewValue)

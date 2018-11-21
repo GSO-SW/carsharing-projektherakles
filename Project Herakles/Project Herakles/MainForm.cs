@@ -16,6 +16,8 @@ namespace Project_Herakles
         public MainForm()
         {
             InitializeComponent();
+            Kunde k = new Kunde();
+            k.UserHinzufügen("Marvin Kutz",01775666,"MK@gmx.de","Am Ring 4","Geheim");
         }
     }
 }
