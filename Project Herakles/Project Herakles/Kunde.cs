@@ -10,28 +10,25 @@ namespace Project_Herakles
 {
     class Kunde
     {
-        string Name;
-        int TelefonNr;
-        string EMail;
-        string Adresse;
-        string Passwort;
+        string name, email, adresse, passwort;
+        int telefonNr;
 
-        internal void UserHinzufügen(string Name, int TelefonNr,string EMail,string Adresse,string Passwort)
+        internal void userHinzufügen(string name, int telefonNr,string email,string adresse,string passwort)
         {
             DBController DBC = new DBController();
-            DBC.InsertInToKunde(Name, TelefonNr, EMail, Adresse, Passwort);
+            DBC.insertInToKunde(name, telefonNr, email, adresse, passwort);
             MessageBox.Show("Kunde zur Datenbank hinzugefügt");
         }
-        internal void UserBearbeiten(string Spalte,string Name, string NewValue)
+        internal void userBearbeiten(string spalte,string name, string newValue)
         {
             DBController DBC = new DBController();
-            DBC.UpdateDB("Kunde",Spalte,Name,NewValue);
+            DBC.updateDB("Kunde",spalte,name,newValue);
             MessageBox.Show("Kunde wurde in der Datenbank aktualisiert");
         }
-        internal void UserLöschen(string Name)
+        internal void userLöschen(string name)
         {
             DBController DBC = new DBController();
-            DBC.DeleteFromDB("Kunde", "Name", Name);
+            DBC.deleteFromDB("Kunde", "Name", name);
             MessageBox.Show("Kunde wurde in der Datenbank gelöscht");
         }
     }

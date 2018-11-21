@@ -8,16 +8,10 @@ namespace Project_Herakles
 {
     class Fahrzeug
     {
-        int FahrzeugID;
-        string Modell;
-        string Hersteller;
-        double Preis;
-        string Standort;
-        string Kennzeichen;
-        int Tankgröße;
-        int Tankstand;
-        int Verbrauch;
-        string Kraftstoff;
+        //sollte man den Verbrauch nicht auch lieber als Double speichern?
+        int fahrzeugID, tankgröße, tankstand, verbrauch;
+        string modell, hersteller, standort, kennzeichen, kraftstoff;
+        double preis;
 
 
 
