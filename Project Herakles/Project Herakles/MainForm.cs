@@ -17,8 +17,7 @@ namespace Project_Herakles
         {
             InitializeComponent();
             Kunde k = new Kunde();
-            DateTime Datum = new DateTime(19990812);
-            k.UserHinzufügen("Marvin Kutz",01775666,"MK@gmx.de","Am Ring 4",Datum,"Geheim");
+            k.UserHinzufügen("Marvin Kutz",01775666,"MK@gmx.de","Am Ring 4","Geheim");
         }
     }
 }

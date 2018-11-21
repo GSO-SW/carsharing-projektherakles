@@ -13,7 +13,7 @@ namespace Project_Herakles
         string connectionString = @"host=localhost;user=root;database=carsharingdb";
 
        
-        internal void InsertInToKunde(string Name, int TelefonNr, string EMail, string Adresse, DateTime Geburtsdatum, string Passwort)
+        internal void InsertInToKunde(string Name, int TelefonNr, string EMail, string Adresse, string Passwort)
         {
             // create SqlConnection object
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -23,14 +23,13 @@ namespace Project_Herakles
                     connection.Open();
                     MessageBox.Show("Verbindung Hergestellt");
 
-                    using (MySqlCommand command = new MySqlCommand("INSERT INTO user VALUES(@RechteID, @Name, @TelefonNr, @EMail, @Adresse, @Geburtsdatum, @Passwort)", connection))
+                    using (MySqlCommand command = new MySqlCommand("INSERT INTO user (RechteID,Name,TelefonNr,EMail,Adresse,Passwort) " +
+                        "VALUES (1, @Name, @TelefonNr, @EMail,@Adresse, @Passwort)", connection))
                     {   /*Datenbank Tabellen attribut Name ist das 1. das 2. ist der variablen name*/
-                        command.Parameters.Add(new MySqlParameter("RechteID", 1));
                         command.Parameters.Add(new MySqlParameter("Name", Name));
                         command.Parameters.Add(new MySqlParameter("TelefonNr", TelefonNr));
                         command.Parameters.Add(new MySqlParameter("EMail", EMail));
                         command.Parameters.Add(new MySqlParameter("Adresse", Adresse));
-                        command.Parameters.Add(new MySqlParameter("Geburtsdatum", Geburtsdatum));
                         command.Parameters.Add(new MySqlParameter("Passwort", Passwort));
                         command.ExecuteNonQuery();
                     }
