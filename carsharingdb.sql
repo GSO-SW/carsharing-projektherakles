@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 26. Sep 2018 um 14:17
+-- Erstellungszeit: 21. Nov 2018 um 15:30
 -- Server-Version: 10.1.35-MariaDB
 -- PHP-Version: 7.2.9
 
@@ -176,6 +176,16 @@ ALTER TABLE `zahlung`
   ADD PRIMARY KEY (`ZahlungID`);
 
 --
+-- AUTO_INCREMENT für exportierte Tabellen
+--
+
+--
+-- AUTO_INCREMENT für Tabelle `user`
+--
+ALTER TABLE `user`
+  MODIFY `AccountID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- Constraints der exportierten Tabellen
 --
 
@@ -183,7 +193,8 @@ ALTER TABLE `zahlung`
 -- Constraints der Tabelle `fahrt`
 --
 ALTER TABLE `fahrt`
-  ADD CONSTRAINT `fahrt_ibfk_1` FOREIGN KEY (`FahrzeugID`) REFERENCES `fahrzeug` (`FahrzeugID`);
+  ADD CONSTRAINT `fahrt_ibfk_1` FOREIGN KEY (`FahrzeugID`) REFERENCES `fahrzeug` (`FahrzeugID`),
+  ADD CONSTRAINT `fahrt_ibfk_2` FOREIGN KEY (`AccountID`) REFERENCES `user` (`AccountID`);
 
 --
 -- Constraints der Tabelle `paypal`
@@ -195,7 +206,6 @@ ALTER TABLE `paypal`
 -- Constraints der Tabelle `user`
 --
 ALTER TABLE `user`
-  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`AccountID`) REFERENCES `fahrt` (`AccountID`),
   ADD CONSTRAINT `user_ibfk_2` FOREIGN KEY (`ZahlungsID`) REFERENCES `zahlung` (`ZahlungID`),
   ADD CONSTRAINT `user_ibfk_3` FOREIGN KEY (`RechteID`) REFERENCES `rechte` (`RechteID`);
 
