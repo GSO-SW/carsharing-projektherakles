@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 21. Nov 2018 um 17:24
+-- Erstellungszeit: 21. Nov 2018 um 17:30
 -- Server-Version: 10.1.37-MariaDB
 -- PHP-Version: 7.2.12
 
@@ -85,10 +85,17 @@ CREATE TABLE `user` (
   `RechteID` int(11) NOT NULL,
   `Name` char(100) COLLATE latin1_german1_ci NOT NULL,
   `TelefonNr` int(11) NOT NULL,
-  `E-Mail` char(100) COLLATE latin1_german1_ci NOT NULL,
+  `EMail` char(100) COLLATE latin1_german1_ci NOT NULL,
   `Adresse` char(100) COLLATE latin1_german1_ci NOT NULL,
   `Passwort` char(100) COLLATE latin1_german1_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
+
+--
+-- Daten für Tabelle `user`
+--
+
+INSERT INTO `user` (`AccountID`, `RechteID`, `Name`, `TelefonNr`, `EMail`, `Adresse`, `Passwort`) VALUES
+(4, 1, 'Marvin Kutz', 1775666, 'MK@gmx.de', 'Am Ring 4', 'Geheim');
 
 --
 -- Indizes der exportierten Tabellen
@@ -149,7 +156,7 @@ ALTER TABLE `rechte`
 -- AUTO_INCREMENT für Tabelle `user`
 --
 ALTER TABLE `user`
-  MODIFY `AccountID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `AccountID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints der exportierten Tabellen
