@@ -8,21 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace Project_Herakles
 {
-    public partial class MainForm : Form
+    public partial class AddUserForm : Form
     {
-        public MainForm()
+        public AddUserForm()
         {
             InitializeComponent();
-
         }
 
-        private void AddUser_Click(object sender, EventArgs e)
+        private void FinishButton_Click(object sender, EventArgs e)
         {
-            AddUserForm addUser = new AddUserForm();
-            addUser.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -28,12 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.AddUser = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            //
+            // AddUser
+            //
+            this.AddUser.Location = new System.Drawing.Point(12, 12);
+            this.AddUser.Name = "AddUser";
+            this.AddUser.Size = new System.Drawing.Size(101, 23);
+            this.AddUser.TabIndex = 0;
+            this.AddUser.Text = "KundeHinzufügen";
+            this.AddUser.UseVisualStyleBackColor = true;
+            this.AddUser.Click += new System.EventHandler(this.AddUser_Click);
+            //
+            // MainForm
+            //
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.AddUser);
+            this.Name = "MainForm";
             this.Text = "MainForm";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button AddUser;
     }
 }
