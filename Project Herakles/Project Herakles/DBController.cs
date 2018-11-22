@@ -40,6 +40,7 @@ namespace Project_Herakles
                 }
                 finally
                 {
+
                     // close connection from database
                     connection.Close();
                 }
