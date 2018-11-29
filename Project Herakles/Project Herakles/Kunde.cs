@@ -12,8 +12,7 @@ namespace Project_Herakles
     {
         string name, email, adresse, passwort;
         int telefonNr;
-
-        internal void userHinzuf�gen(string name, int telefonNr,string email,string adresse,string passwort)
+        internal void userHinzufügen(string name, int telefonNr,string email,string adresse,string passwort)
         {
             DBController DBC = new DBController();
             DBC.insertInToKunde(name, telefonNr, email, adresse, passwort);
@@ -25,7 +24,7 @@ namespace Project_Herakles
             DBC.updateDB("Kunde",spalte,name,newValue);
             MessageBox.Show("Kunde wurde in der Datenbank aktualisiert");
         }
-        internal void userL�schen(string name)
+        internal void userLöschen(string name)
         {
             DBController DBC = new DBController();
             DBC.deleteFromDB("Kunde", "Name", name);
