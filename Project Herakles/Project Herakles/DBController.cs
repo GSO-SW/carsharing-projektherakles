@@ -12,7 +12,7 @@ namespace Project_Herakles
     {
         string connectionString = @"host=localhost;user=root;database=carsharingdb";
        
-        internal void insertInToKunde(string name, int telefonNr, string email, string adresse, string passwort)
+        internal void insertInToKunde(string name, int telefonNr, string email, string adresse, string password)
         {
             // create SqlConnection object
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -29,7 +29,7 @@ namespace Project_Herakles
                         command.Parameters.Add(new MySqlParameter("TelefonNr", telefonNr));
                         command.Parameters.Add(new MySqlParameter("EMail", email));
                         command.Parameters.Add(new MySqlParameter("Adresse", adresse));
-                        command.Parameters.Add(new MySqlParameter("Passwort", passwort));
+                        command.Parameters.Add(new MySqlParameter("Passwort", password));
                         command.ExecuteNonQuery();
                     }
                 }

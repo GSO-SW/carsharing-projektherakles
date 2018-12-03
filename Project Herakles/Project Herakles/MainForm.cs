@@ -24,5 +24,11 @@ namespace Project_Herakles
             AddUserForm addUser = new AddUserForm();
             addUser.ShowDialog();
         }
+
+        private void buttonAddFahrzeug_Click(object sender, EventArgs e)
+        {
+            AddUserForm hinzufügenFahrzeug = new AddUserForm();
+            addUser.ShowDialog();
+        }
     }
 }
