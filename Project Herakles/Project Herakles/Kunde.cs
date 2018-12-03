@@ -16,7 +16,7 @@ namespace Project_Herakles
         {
             DBController DBC = new DBController();
             DBC.insertInToKunde(name, telefonNr, email, adresse, passwort);
-            MessageBox.Show("Kunde zur Datenbank hinzugef�gt");
+            MessageBox.Show("Kunde zur Datenbank hinzugefügt");
         }
         internal void userBearbeiten(string spalte,string name, string newValue)
         {
@@ -28,7 +28,7 @@ namespace Project_Herakles
         {
             DBController DBC = new DBController();
             DBC.deleteFromDB("Kunde", "Name", name);
-            MessageBox.Show("Kunde wurde in der Datenbank gel�scht");
+            MessageBox.Show("Kunde wurde in der Datenbank gelöscht");
         }
     }
 }
