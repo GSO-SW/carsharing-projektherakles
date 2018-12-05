@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 21. Nov 2018 um 16:03
--- Server-Version: 10.1.37-MariaDB
--- PHP-Version: 7.2.12
+-- Erstellungszeit: 05. Dez 2018 um 14:31
+-- Server-Version: 10.1.35-MariaDB
+-- PHP-Version: 7.2.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -104,10 +104,11 @@ CREATE TABLE `user` (
   `RechteID` int(11) NOT NULL,
   `Name` char(100) COLLATE latin1_german1_ci NOT NULL,
   `TelefonNr` int(11) NOT NULL,
-  `E-Mail` char(100) COLLATE latin1_german1_ci NOT NULL,
+  `EMail` char(100) COLLATE latin1_german1_ci NOT NULL,
   `Adresse` char(100) COLLATE latin1_german1_ci NOT NULL,
   `ZahlungsID` int(11) NOT NULL,
-  `Passwort` char(100) COLLATE latin1_german1_ci NOT NULL
+  `Passwort` char(100) COLLATE latin1_german1_ci NOT NULL,
+  `LoginName` varchar(100) COLLATE latin1_german1_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
 
 -- --------------------------------------------------------
@@ -213,7 +214,7 @@ ALTER TABLE `rechte`
 -- AUTO_INCREMENT für Tabelle `user`
 --
 ALTER TABLE `user`
-  MODIFY `AccountID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `AccountID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints der exportierten Tabellen
