@@ -74,25 +74,34 @@ namespace Project_Herakles
                 }
             }
         }
-        internal void checkLoginData(string LoginName , string password)
+        internal bool checkLoginData(string LoginName , string password)
         {
-            // create SqlConnection object
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            try
             {
-                connection.Open();
-                MessageBox.Show("Verbindung Hergestellt");
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+                    MessageBox.Show("Verbindung Hergestellt");
 
-                using (MySqlCommand command = new MySqlCommand("SELECT LoginName, Passwort" +
-                    "FROM user " +
-                    "WHERE LoginName = @LoginName" +
-                    "AND Passwort = @Password", connection))
-                {   /*Datenbank Tabellen attribut Name ist das 1. das 2. ist der variablen name*/
-                    command.Parameters.Add(new MySqlParameter("LoginName", LoginName));
-                    command.Parameters.Add(new MySqlParameter("Password", password));
-                    command.ExecuteNonQuery();
+                    using (MySqlCommand command = new MySqlCommand("SELECT LoginName, Passwort" +
+                        "FROM user " +
+                        "WHERE LoginName = @LoginName" +
+                        "AND Passwort = @Password", connection))
+                    {   /*Datenbank Tabellen attribut Name ist das 1. das 2. ist der variablen name*/
+                        command.Parameters.Add(new MySqlParameter("LoginName", LoginName));
+                        command.Parameters.Add(new MySqlParameter("Password", password));
+                        command.ExecuteNonQuery();
+                    }
+
                 }
-
+                return true;
             }
+            catch (Exception)
+            {
+                return false;
+            }
+            // create SqlConnection object
+            
         }
         internal void deleteFromDB(string table, string column, string uniqueValue)
         {
