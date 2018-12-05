@@ -11,7 +11,7 @@ namespace Project_Herakles
     class DBController
     {
         string connectionString = @"host=localhost;user=root;database=carsharingdb";
-       
+
         internal void insertInToKunde(string name, int telefonNr, string email, string adresse, string passwort)
         {
             // create SqlConnection object
@@ -74,8 +74,27 @@ namespace Project_Herakles
                 }
             }
         }
+        internal void checkLoginData(string LoginName , string password)
+        {
+            // create SqlConnection object
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                MessageBox.Show("Verbindung Hergestellt");
 
-        internal void deleteFromDB(string table,string column,string uniqueValue)
+                using (MySqlCommand command = new MySqlCommand("SELECT LoginName, Passwort" +
+                    "FROM user " +
+                    "WHERE LoginName = @LoginName" +
+                    "AND Passwort = @Password", connection))
+                {   /*Datenbank Tabellen attribut Name ist das 1. das 2. ist der variablen name*/
+                    command.Parameters.Add(new MySqlParameter("LoginName", LoginName));
+                    command.Parameters.Add(new MySqlParameter("Password", password));
+                    command.ExecuteNonQuery();
+                }
+
+            }
+        }
+        internal void deleteFromDB(string table, string column, string uniqueValue)
         {
             // create SqlConnection object
             using (MySqlConnection connection = new MySqlConnection(connectionString))
