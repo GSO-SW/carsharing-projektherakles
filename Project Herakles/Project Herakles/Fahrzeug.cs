@@ -8,18 +8,8 @@ namespace Project_Herakles
 {
     class Fahrzeug
     {
-        int FahrzeugID;
-        string Modell;
-        string Hersteller;
+        int fahrzeugID, tankgröße, tankstand, verbrauch;
+        string modell, hersteller, standort, kennzeichen, kraftstoff;
         double Preis;
-        string Standort;
-        string Kennzeichen;
-        int Tankgröße;
-        int Tankstand;
-        int Verbrauch;
-        string Kraftstoff;
-
-
-
     }
 }
