@@ -20,6 +20,11 @@ namespace Project_Herakles
 
         private void FinishButton_Click(object sender, EventArgs e)
         {
+            if (ZahlungsartlistBox.Text == "Kreditkarte")
+            {
+                AddCreditcardForm addCreditcard = new AddCreditcardForm();
+                addCreditcard.ShowDialog();
+            }
             this.Close();
             Kunde kunde = new Kunde();
             kunde.UserHinzufuegen(NameTextBox.Text, Convert.ToInt32(TelefonNrTextBox.Text), EMailTextBox.Text, StrasseTextBox.Text, Convert.ToInt32(HausNrTextBox.Text),OrttextBox.Text, Convert.ToInt32(PLZtextBox.Text), PasswordtextBox.Text, LoginNameTextBox.Text, Admin);
@@ -33,11 +38,11 @@ namespace Project_Herakles
             }
             catch (Exception)
             {
-                NameTextBox.Clear();
                 if (NameTextBox.TextLength > 0)
                 {
                     MessageBox.Show("Eingabe kann nicht verarbeitet werden");
                 }
+                NameTextBox.Clear();
             }
         }
 
@@ -49,11 +54,11 @@ namespace Project_Herakles
             }
             catch (Exception)
             {
-                EMailTextBox.Clear();
                 if (EMailTextBox.TextLength > 0)
                 {
                     MessageBox.Show("Eingabe kann nicht verarbeitet werden");
                 }
+                EMailTextBox.Clear();
             }
         }
 
@@ -65,13 +70,14 @@ namespace Project_Herakles
             }
             catch (Exception)
             {
-                TelefonNrTextBox.Clear();
+
                 if (TelefonNrTextBox.TextLength > 0)
                 {
                     MessageBox.Show("Eingabe kann nicht verarbeitet werden");
                 }
+                TelefonNrTextBox.Clear();
             }
-
+           
         }
         private void OrttextBox_TextChanged(object sender, EventArgs e)
         {
@@ -81,11 +87,12 @@ namespace Project_Herakles
             }
             catch (Exception)
             {
-                OrttextBox.Clear();
+
                 if (OrttextBox.TextLength > 0)
                 {
                     MessageBox.Show("Eingabe kann nicht verarbeitet werden");
                 }
+                OrttextBox.Clear();
             }
         }
 
@@ -97,11 +104,12 @@ namespace Project_Herakles
             }
             catch (Exception)
             {
-                PLZtextBox.Clear();
+                
                 if (PLZtextBox.TextLength > 0)
                 {
                     MessageBox.Show("Eingabe kann nicht verarbeitet werden");
                 }
+                PLZtextBox.Clear();
             }
         }
 
@@ -113,11 +121,12 @@ namespace Project_Herakles
             }
             catch (Exception)
             {
-                StrasseTextBox.Clear();
+                
                 if (StrasseTextBox.TextLength > 0)
                 {
                     MessageBox.Show("Eingabe kann nicht verarbeitet werden");
                 }
+                StrasseTextBox.Clear();
             }
         }
         private void HausNrTextBox_TextChanged(object sender, EventArgs e)
@@ -128,11 +137,12 @@ namespace Project_Herakles
             }
             catch (Exception)
             {
-                HausNrTextBox.Clear();
+                
                 if (HausNrTextBox.TextLength > 0)
                 {
                     MessageBox.Show("Eingabe kann nicht verarbeitet werden");
                 }
+                HausNrTextBox.Clear();
             }
         }
         private void ZahlungsartlistBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -147,11 +157,12 @@ namespace Project_Herakles
             }
             catch (Exception)
             {
-                PasswordtextBox.Clear();
+                
                 if (PasswordtextBox.TextLength > 0)
                 {
                     MessageBox.Show("Eingabe kann nicht verarbeitet werden");
                 }
+                PasswordtextBox.Clear();
             }
         }
 
