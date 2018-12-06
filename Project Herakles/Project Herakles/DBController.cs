@@ -12,7 +12,7 @@ namespace Project_Herakles
     {
         string connectionString = @"host=localhost;user=root;database=carsharingdb";
 
-        internal void insertInToKunde(string name, int telefonNr, string email, string Strasse, int Hausnummer, string Ort,int PLZ, string passwort,string LoginName, int RechteID)
+        internal void insertInToKunde(string name, int telefonNr, string email, string Strasse, int Hausnummer, string Ort, int PLZ, string passwort, string LoginName, int RechteID)
         {
             // create SqlConnection object
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -79,7 +79,7 @@ namespace Project_Herakles
                 }
             }
         }
-        internal bool checkLoginData(string LoginName , string password)
+        internal bool checkLoginData(string LoginName, string password)
         {
             try
             {
@@ -97,7 +97,7 @@ namespace Project_Herakles
                         command.Parameters.Add(new MySqlParameter("Password", password));
                         command.ExecuteNonQuery();
                     }
-
+                    connection.Close();
                 }
                 return true;
             }
@@ -105,8 +105,6 @@ namespace Project_Herakles
             {
                 return false;
             }
-            // create SqlConnection object
-            
         }
         internal void deleteFromDB(string table, string column, string uniqueValue)
         {
