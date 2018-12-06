@@ -28,7 +28,7 @@ namespace Project_Herakles
 
         {
             DBController DBC = new DBController();
-            DBC.deleteFromDB("user", "LoginName", loginName);
+            DBC.deleteKunde(loginName);
             MessageBox.Show("Kunde wurde in der Datenbank gelöscht");
         }
     }

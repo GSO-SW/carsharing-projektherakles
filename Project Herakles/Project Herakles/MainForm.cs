@@ -27,7 +27,21 @@ namespace Project_Herakles
 
         private void deleteKundeButton_Click(object sender, EventArgs e)
         {
-            
+
+            LoginForm loginForm = new LoginForm();
+            loginForm.ShowDialog();
+            if (loginForm.login == true)
+            {
+                DBController dBController = new DBController();
+                dBController.deleteKunde(loginForm.loginName);
+            }
+            else
+            {
+                MessageBox.Show("User konnte nicht gelöscht werden!");
+            }
+
+
+
         }
     }
 }

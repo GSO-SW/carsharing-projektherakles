@@ -88,9 +88,9 @@ namespace Project_Herakles
                     connection.Open();
                     MessageBox.Show("Verbindung Hergestellt");
 
-                    using (MySqlCommand command = new MySqlCommand("SELECT LoginName, Passwort" +
+                    using (MySqlCommand command = new MySqlCommand("SELECT *" +
                         "FROM user " +
-                        "WHERE LoginName = @LoginName" +
+                        "WHERE LoginName = @LoginName " +
                         "AND Passwort = @Password", connection))
                     {   /*Datenbank Tabellen attribut Name ist das 1. das 2. ist der variablen name*/
                         command.Parameters.Add(new MySqlParameter("LoginName", LoginName));
@@ -106,7 +106,7 @@ namespace Project_Herakles
                 return false;
             }
         }
-        internal void deleteFromDB(string table, string column, string uniqueValue)
+        internal void deleteKunde(string LoginName)
         {
             // create SqlConnection object
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -116,11 +116,9 @@ namespace Project_Herakles
                     connection.Open();
                     MessageBox.Show("Verbindung Hergestellt");
 
-                    using (MySqlCommand command = new MySqlCommand("DELETE FROM @Table WHERE @Column = @UniqueValue", connection))
+                    using (MySqlCommand command = new MySqlCommand("DELETE FROM user WHERE LoginName = @LoginName", connection))
                     {   /*Datenbank Tabellen attribut Name ist das 1. das 2. ist der variablen name*/
-                        command.Parameters.Add(new MySqlParameter("Table", table));
-                        command.Parameters.Add(new MySqlParameter("Column", column));
-                        command.Parameters.Add(new MySqlParameter("UniqueValue", uniqueValue));
+                        command.Parameters.Add(new MySqlParameter("LoginName", LoginName));
                         command.ExecuteNonQuery();
                     }
                 }
