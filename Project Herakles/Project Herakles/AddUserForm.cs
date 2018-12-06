@@ -17,7 +17,6 @@ namespace Project_Herakles
         {
             InitializeComponent();
         }
-
         private void FinishButton_Click(object sender, EventArgs e)
         {
             if (ZahlungsartlistBox.Text == "Kreditkarte")
@@ -27,9 +26,8 @@ namespace Project_Herakles
             }
             this.Close();
             Kunde kunde = new Kunde();
-            kunde.UserHinzufuegen(NameTextBox.Text, Convert.ToInt32(TelefonNrTextBox.Text), EMailTextBox.Text, StrasseTextBox.Text, Convert.ToInt32(HausNrTextBox.Text),OrttextBox.Text, Convert.ToInt32(PLZtextBox.Text), PasswordtextBox.Text, LoginNameTextBox.Text, Admin);
+            kunde.UserHinzufuegen(NameTextBox.Text, Convert.ToInt32(TelefonNrTextBox.Text), EMailTextBox.Text, StrasseTextBox.Text, Convert.ToInt32(HausNrTextBox.Text), OrttextBox.Text, Convert.ToInt32(PLZtextBox.Text), PasswordtextBox.Text, LoginNameTextBox.Text, Admin);
         }
-
         private void NameTextBox_TextChanged(object sender, EventArgs e)
         {
             try
@@ -45,7 +43,6 @@ namespace Project_Herakles
                 NameTextBox.Clear();
             }
         }
-
         private void EMailTextBox_TextChanged(object sender, EventArgs e)
         {
             try
@@ -61,7 +58,6 @@ namespace Project_Herakles
                 EMailTextBox.Clear();
             }
         }
-
         private void TelefonNrTextBox_TextChanged(object sender, EventArgs e)
         {
             try
@@ -77,7 +73,6 @@ namespace Project_Herakles
                 }
                 TelefonNrTextBox.Clear();
             }
-           
         }
         private void OrttextBox_TextChanged(object sender, EventArgs e)
         {
@@ -95,7 +90,6 @@ namespace Project_Herakles
                 OrttextBox.Clear();
             }
         }
-
         private void PLZtextBox_TextChanged(object sender, EventArgs e)
         {
             try
@@ -104,7 +98,6 @@ namespace Project_Herakles
             }
             catch (Exception)
             {
-                
                 if (PLZtextBox.TextLength > 0)
                 {
                     MessageBox.Show("Eingabe kann nicht verarbeitet werden");
@@ -112,7 +105,6 @@ namespace Project_Herakles
                 PLZtextBox.Clear();
             }
         }
-
         private void StrasseTextBox_TextChanged(object sender, EventArgs e)
         {
             try
@@ -121,7 +113,7 @@ namespace Project_Herakles
             }
             catch (Exception)
             {
-                
+
                 if (StrasseTextBox.TextLength > 0)
                 {
                     MessageBox.Show("Eingabe kann nicht verarbeitet werden");
@@ -137,7 +129,7 @@ namespace Project_Herakles
             }
             catch (Exception)
             {
-                
+
                 if (HausNrTextBox.TextLength > 0)
                 {
                     MessageBox.Show("Eingabe kann nicht verarbeitet werden");
@@ -146,9 +138,7 @@ namespace Project_Herakles
             }
         }
         private void ZahlungsartlistBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        {}
         private void PasswordtextBox_TextChanged(object sender, EventArgs e)
         {
             try
@@ -157,7 +147,7 @@ namespace Project_Herakles
             }
             catch (Exception)
             {
-                
+
                 if (PasswordtextBox.TextLength > 0)
                 {
                     MessageBox.Show("Eingabe kann nicht verarbeitet werden");
@@ -165,7 +155,6 @@ namespace Project_Herakles
                 PasswordtextBox.Clear();
             }
         }
-
         private void AdminCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (AdminCheckBox.Checked == true)
