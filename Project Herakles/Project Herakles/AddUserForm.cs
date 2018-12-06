@@ -12,6 +12,7 @@ namespace Project_Herakles
 {
     public partial class AddUserForm : Form
     {
+        private int Admin = 1;
         public AddUserForm()
         {
             InitializeComponent();
@@ -21,7 +22,7 @@ namespace Project_Herakles
         {
             this.Close();
             Kunde kunde = new Kunde();
-            kunde.UserHinzufuegen(NameTextBox.Text, Convert.ToInt32(TelefonNrTextBox.Text), EMailTextBox.Text, StrasseTextBox.Text, Convert.ToInt32(HausNrTextBox.Text),OrttextBox.Text, Convert.ToInt32(PLZtextBox.Text), PasswordtextBox.Text, LoginNameTextBox.Text);
+            kunde.UserHinzufuegen(NameTextBox.Text, Convert.ToInt32(TelefonNrTextBox.Text), EMailTextBox.Text, StrasseTextBox.Text, Convert.ToInt32(HausNrTextBox.Text),OrttextBox.Text, Convert.ToInt32(PLZtextBox.Text), PasswordtextBox.Text, LoginNameTextBox.Text, Admin);
         }
 
         private void NameTextBox_TextChanged(object sender, EventArgs e)
@@ -154,6 +155,16 @@ namespace Project_Herakles
             }
         }
 
-
+        private void AdminCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (AdminCheckBox.Checked == true)
+            {
+                Admin = 2;
+            }
+            if (AdminCheckBox.Checked == false)
+            {
+                Admin = 1;
+            }
+        }
     }
 }

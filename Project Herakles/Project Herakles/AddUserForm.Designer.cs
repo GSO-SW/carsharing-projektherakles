@@ -49,6 +49,7 @@
             this.HausNrTextBox = new System.Windows.Forms.TextBox();
             this.LoginNameLabel = new System.Windows.Forms.Label();
             this.LoginNameTextBox = new System.Windows.Forms.TextBox();
+            this.AdminCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // NameTextBox
@@ -235,11 +236,23 @@
             this.LoginNameTextBox.Size = new System.Drawing.Size(100, 20);
             this.LoginNameTextBox.TabIndex = 23;
             // 
+            // AdminCheckBox
+            // 
+            this.AdminCheckBox.AutoSize = true;
+            this.AdminCheckBox.Location = new System.Drawing.Point(14, 250);
+            this.AdminCheckBox.Name = "AdminCheckBox";
+            this.AdminCheckBox.Size = new System.Drawing.Size(55, 17);
+            this.AdminCheckBox.TabIndex = 24;
+            this.AdminCheckBox.Text = "Admin";
+            this.AdminCheckBox.UseVisualStyleBackColor = true;
+            this.AdminCheckBox.CheckedChanged += new System.EventHandler(this.AdminCheckBox_CheckedChanged);
+            // 
             // AddUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(262, 326);
+            this.Controls.Add(this.AdminCheckBox);
             this.Controls.Add(this.LoginNameTextBox);
             this.Controls.Add(this.LoginNameLabel);
             this.Controls.Add(this.HausNrTextBox);
@@ -291,5 +304,6 @@
         private System.Windows.Forms.TextBox HausNrTextBox;
         private System.Windows.Forms.Label LoginNameLabel;
         private System.Windows.Forms.TextBox LoginNameTextBox;
+        private System.Windows.Forms.CheckBox AdminCheckBox;
     }
 }
