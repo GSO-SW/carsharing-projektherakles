@@ -11,23 +11,28 @@ namespace Project_Herakles
     class Kunde
     {
         string name, email, adresse, passwort;
+        int telefonNr;
+
 
         internal void UserHinzufuegen(string name, int telefonNr,string email,string adresse,string passwort)
+
         {
-            DBController dbc = new DBController();
-            dbc.InsertInToKunde(name, telefonNr, email, adresse, passwort);
+            DBController DBC = new DBController();
+            DBC.insertInToKunde(name, telefonNr, email, adresse, passwort);
             MessageBox.Show("Kunde zur Datenbank hinzugef�gt");
         }
-        internal void UserBearbeiten(string spalte,string name, string newValue)
+        internal void userBearbeiten(string spalte,string name, string newValue)
         {
-            DBController dbc = new DBController();
-            dbc.UpdateDB("Kunde",spalte,name,newValue);
+            DBController DBC = new DBController();
+            DBC.updateDB("Kunde",spalte,name,newValue);
             MessageBox.Show("Kunde wurde in der Datenbank aktualisiert");
         }
+ Form-user-Hinzufügen
         internal void UserLoeschen(string name)
+
         {
-            DBController dbc = new DBController();
-            dbc.DeleteFromDB("Kunde", "Name", name);
+            DBController DBC = new DBController();
+            DBC.deleteFromDB("Kunde", "Name", name);
             MessageBox.Show("Kunde wurde in der Datenbank gel�scht");
         }
     }

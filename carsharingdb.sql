@@ -7,6 +7,7 @@
 -- Server-Version: 10.1.37-MariaDB
 -- PHP-Version: 7.2.12
 
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
@@ -115,7 +116,9 @@ CREATE TABLE `user` (
   `Adresse` char(100) COLLATE latin1_german1_ci NOT NULL,
   `ZahlungsID` int(11) NOT NULL,
   `Passwort` char(100) COLLATE latin1_german1_ci NOT NULL,
+
   `LoginName` int(100) NOT NULL
+
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
 
 --
@@ -229,7 +232,9 @@ ALTER TABLE `rechte`
 -- AUTO_INCREMENT für Tabelle `user`
 --
 ALTER TABLE `user`
+
   MODIFY `AccountID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 
 --
 -- Constraints der exportierten Tabellen
