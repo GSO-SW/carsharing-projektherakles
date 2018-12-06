@@ -16,5 +16,10 @@ namespace Project_Herakles
         {
             InitializeComponent();
         }
+
+        private void AddCreditcardForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
