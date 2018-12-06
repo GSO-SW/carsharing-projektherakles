@@ -79,6 +79,46 @@ namespace Project_Herakles
                 }
             }
         }
+        internal bool checkAdmin(string LoginName)
+        {
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                {
+                    connection.Open();
+                    MessageBox.Show("Verbindung Hergestellt");
+
+                    MySqlCommand command = new MySqlCommand("SELECT RechteID" + "FROM user " + "WHERE LoginName = @LoginName ", connection);
+                    /*Datenbank Tabellen attribut Name ist das 1. das 2. ist der variablen name*/
+                    command.Parameters.Add(new MySqlParameter("LoginName", LoginName));
+                    command.ExecuteNonQuery();
+
+                    object result = command.ExecuteScalar();
+                    if (result != null)
+                    {
+                        if (Convert.ToInt32(result) == 2)
+                        {
+                            connection.Close();
+                            return true;
+                        }
+                        else
+                        {
+                            connection.Close();
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        connection.Close();
+                        return false;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
         internal bool checkLoginData(string LoginName, string password)
         {
             try
