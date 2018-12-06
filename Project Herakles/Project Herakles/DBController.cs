@@ -12,7 +12,7 @@ namespace Project_Herakles
     {
         string connectionString = @"host=localhost;user=root;database=carsharingdb";
 
-        internal void insertInToKunde(string name, int telefonNr, string email, string Strasse, int Hausnummer, string Ort,int PLZ, string passwort)
+        internal void insertInToKunde(string name, int telefonNr, string email, string Strasse, int Hausnummer, string Ort,int PLZ, string passwort,string LoginName)
         {
             // create SqlConnection object
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -22,8 +22,8 @@ namespace Project_Herakles
                     connection.Open();
                     MessageBox.Show("Verbindung Hergestellt");
 
-                    using (MySqlCommand command = new MySqlCommand("INSERT INTO user (RechteID,Name,TelefonNr,EMail,Strasse,Hausnummer,Ort,PLZ,Passwort) " +
-                        "VALUES (1, @Name, @TelefonNr, @EMail,@Strasse,@Hausnummer,@Ort,@PLZ, @Passwort)", connection))
+                    using (MySqlCommand command = new MySqlCommand("INSERT INTO user (RechteID,Name,TelefonNr,EMail,Strasse,Hausnummer,Ort,PLZ,Passwort,LoginName) " +
+                        "VALUES (1, @Name, @TelefonNr, @EMail,@Strasse,@Hausnummer,@Ort,@PLZ, @Passwort,@LoginName)", connection))
                     {   /*Datenbank Tabellen attribut Name ist das 1. das 2. ist der variablen name*/
                         command.Parameters.Add(new MySqlParameter("Name", name));
                         command.Parameters.Add(new MySqlParameter("TelefonNr", telefonNr));
@@ -33,6 +33,7 @@ namespace Project_Herakles
                         command.Parameters.Add(new MySqlParameter("Ort", Ort));
                         command.Parameters.Add(new MySqlParameter("PLZ", PLZ));
                         command.Parameters.Add(new MySqlParameter("Passwort", passwort));
+                        command.Parameters.Add(new MySqlParameter("LoginName", LoginName));
                         command.ExecuteNonQuery();
                     }
                 }

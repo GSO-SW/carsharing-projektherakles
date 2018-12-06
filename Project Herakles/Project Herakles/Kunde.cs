@@ -10,16 +10,12 @@ namespace Project_Herakles
 {
     class Kunde
     {
-        string name, email, adresse, passwort;
-        int telefonNr;
-
-
-        internal void UserHinzufuegen(string name, int telefonNr, string email, string Strasse, int Hausnummer, string Ort, int PLZ, string passwort)
+        internal void UserHinzufuegen(string name, int telefonNr, string email, string Strasse, int Hausnummer, string Ort, int PLZ, string passwort,string LoginName)
 
         {
             DBController DBC = new DBController();
-            DBC.insertInToKunde(name, telefonNr, email, Strasse, Hausnummer, Ort, PLZ, passwort);
-            MessageBox.Show("Kunde zur Datenbank hinzugef�gt");
+            DBC.insertInToKunde(name, telefonNr, email, Strasse, Hausnummer, Ort, PLZ, passwort,LoginName);
+            MessageBox.Show("Kunde zur Datenbank hinzugefügt");
         }
         internal void userBearbeiten(string spalte, string name, string newValue)
         {
