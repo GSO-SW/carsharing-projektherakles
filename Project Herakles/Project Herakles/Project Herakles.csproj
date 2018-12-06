@@ -49,12 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddCreditcardForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddCreditcardForm.Designer.cs">
-      <DependentUpon>AddCreditcardForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="AddUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,12 +66,6 @@
       <DependentUpon>FahrzeugDialogForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Kunde.cs" />
-    <Compile Include="LoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,16 +74,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddCreditcardForm.resx">
-      <DependentUpon>AddCreditcardForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FahrzeugDialogForm.resx">
       <DependentUpon>FahrzeugDialogForm.cs</DependentUpon>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
