@@ -47,6 +47,8 @@
             this.StrasseTextBox = new System.Windows.Forms.TextBox();
             this.HausNrLabel = new System.Windows.Forms.Label();
             this.HausNrTextBox = new System.Windows.Forms.TextBox();
+            this.LoginNameLabel = new System.Windows.Forms.Label();
+            this.LoginNameTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // NameTextBox
@@ -86,7 +88,7 @@
             // EMailLabel
             // 
             this.EMailLabel.AutoSize = true;
-            this.EMailLabel.Location = new System.Drawing.Point(163, 9);
+            this.EMailLabel.Location = new System.Drawing.Point(144, 58);
             this.EMailLabel.Name = "EMailLabel";
             this.EMailLabel.Size = new System.Drawing.Size(33, 13);
             this.EMailLabel.TabIndex = 4;
@@ -94,7 +96,7 @@
             // 
             // EMailTextBox
             // 
-            this.EMailTextBox.Location = new System.Drawing.Point(166, 25);
+            this.EMailTextBox.Location = new System.Drawing.Point(144, 74);
             this.EMailTextBox.Name = "EMailTextBox";
             this.EMailTextBox.Size = new System.Drawing.Size(100, 20);
             this.EMailTextBox.TabIndex = 5;
@@ -112,7 +114,7 @@
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Location = new System.Drawing.Point(11, 174);
+            this.PasswordLabel.Location = new System.Drawing.Point(141, 109);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(53, 13);
             this.PasswordLabel.TabIndex = 10;
@@ -120,7 +122,7 @@
             // 
             // PasswordtextBox
             // 
-            this.PasswordtextBox.Location = new System.Drawing.Point(14, 190);
+            this.PasswordtextBox.Location = new System.Drawing.Point(144, 125);
             this.PasswordtextBox.Name = "PasswordtextBox";
             this.PasswordtextBox.Size = new System.Drawing.Size(100, 20);
             this.PasswordtextBox.TabIndex = 11;
@@ -128,7 +130,7 @@
             // 
             // FinishButton
             // 
-            this.FinishButton.Location = new System.Drawing.Point(690, 402);
+            this.FinishButton.Location = new System.Drawing.Point(169, 277);
             this.FinishButton.Name = "FinishButton";
             this.FinishButton.Size = new System.Drawing.Size(75, 23);
             this.FinishButton.TabIndex = 12;
@@ -152,7 +154,7 @@
             // Ortlabel
             // 
             this.Ortlabel.AutoSize = true;
-            this.Ortlabel.Location = new System.Drawing.Point(163, 58);
+            this.Ortlabel.Location = new System.Drawing.Point(13, 208);
             this.Ortlabel.Name = "Ortlabel";
             this.Ortlabel.Size = new System.Drawing.Size(21, 13);
             this.Ortlabel.TabIndex = 14;
@@ -160,7 +162,7 @@
             // 
             // OrttextBox
             // 
-            this.OrttextBox.Location = new System.Drawing.Point(166, 74);
+            this.OrttextBox.Location = new System.Drawing.Point(15, 224);
             this.OrttextBox.Name = "OrttextBox";
             this.OrttextBox.Size = new System.Drawing.Size(100, 20);
             this.OrttextBox.TabIndex = 15;
@@ -169,7 +171,7 @@
             // PLZlabel
             // 
             this.PLZlabel.AutoSize = true;
-            this.PLZlabel.Location = new System.Drawing.Point(163, 109);
+            this.PLZlabel.Location = new System.Drawing.Point(141, 208);
             this.PLZlabel.Name = "PLZlabel";
             this.PLZlabel.Size = new System.Drawing.Size(27, 13);
             this.PLZlabel.TabIndex = 16;
@@ -177,7 +179,7 @@
             // 
             // PLZtextBox
             // 
-            this.PLZtextBox.Location = new System.Drawing.Point(166, 125);
+            this.PLZtextBox.Location = new System.Drawing.Point(144, 224);
             this.PLZtextBox.Name = "PLZtextBox";
             this.PLZtextBox.Size = new System.Drawing.Size(100, 20);
             this.PLZtextBox.TabIndex = 17;
@@ -186,7 +188,7 @@
             // StrasseLabel
             // 
             this.StrasseLabel.AutoSize = true;
-            this.StrasseLabel.Location = new System.Drawing.Point(163, 159);
+            this.StrasseLabel.Location = new System.Drawing.Point(12, 166);
             this.StrasseLabel.Name = "StrasseLabel";
             this.StrasseLabel.Size = new System.Drawing.Size(42, 13);
             this.StrasseLabel.TabIndex = 18;
@@ -194,7 +196,7 @@
             // 
             // StrasseTextBox
             // 
-            this.StrasseTextBox.Location = new System.Drawing.Point(166, 175);
+            this.StrasseTextBox.Location = new System.Drawing.Point(15, 181);
             this.StrasseTextBox.Name = "StrasseTextBox";
             this.StrasseTextBox.Size = new System.Drawing.Size(100, 20);
             this.StrasseTextBox.TabIndex = 19;
@@ -203,7 +205,7 @@
             // HausNrLabel
             // 
             this.HausNrLabel.AutoSize = true;
-            this.HausNrLabel.Location = new System.Drawing.Point(302, 159);
+            this.HausNrLabel.Location = new System.Drawing.Point(141, 165);
             this.HausNrLabel.Name = "HausNrLabel";
             this.HausNrLabel.Size = new System.Drawing.Size(43, 13);
             this.HausNrLabel.TabIndex = 20;
@@ -211,17 +213,35 @@
             // 
             // HausNrTextBox
             // 
-            this.HausNrTextBox.Location = new System.Drawing.Point(305, 174);
+            this.HausNrTextBox.Location = new System.Drawing.Point(144, 181);
             this.HausNrTextBox.Name = "HausNrTextBox";
             this.HausNrTextBox.Size = new System.Drawing.Size(100, 20);
             this.HausNrTextBox.TabIndex = 21;
             this.HausNrTextBox.TextChanged += new System.EventHandler(this.HausNrTextBox_TextChanged);
             // 
+            // LoginNameLabel
+            // 
+            this.LoginNameLabel.AutoSize = true;
+            this.LoginNameLabel.Location = new System.Drawing.Point(144, 9);
+            this.LoginNameLabel.Name = "LoginNameLabel";
+            this.LoginNameLabel.Size = new System.Drawing.Size(61, 13);
+            this.LoginNameLabel.TabIndex = 22;
+            this.LoginNameLabel.Text = "LoginName";
+            // 
+            // LoginNameTextBox
+            // 
+            this.LoginNameTextBox.Location = new System.Drawing.Point(144, 25);
+            this.LoginNameTextBox.Name = "LoginNameTextBox";
+            this.LoginNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.LoginNameTextBox.TabIndex = 23;
+            // 
             // AddUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(262, 326);
+            this.Controls.Add(this.LoginNameTextBox);
+            this.Controls.Add(this.LoginNameLabel);
             this.Controls.Add(this.HausNrTextBox);
             this.Controls.Add(this.HausNrLabel);
             this.Controls.Add(this.StrasseTextBox);
@@ -269,5 +289,7 @@
         private System.Windows.Forms.TextBox StrasseTextBox;
         private System.Windows.Forms.Label HausNrLabel;
         private System.Windows.Forms.TextBox HausNrTextBox;
+        private System.Windows.Forms.Label LoginNameLabel;
+        private System.Windows.Forms.TextBox LoginNameTextBox;
     }
 }
