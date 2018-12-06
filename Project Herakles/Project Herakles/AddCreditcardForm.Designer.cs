@@ -32,6 +32,7 @@
             this.KontoinhaberTextBox = new System.Windows.Forms.TextBox();
             this.KartenNrlabel = new System.Windows.Forms.Label();
             this.KartenNrlTextBox = new System.Windows.Forms.TextBox();
+            this.KreditkarteButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // KontoinhaberLabel
@@ -49,6 +50,7 @@
             this.KontoinhaberTextBox.Name = "KontoinhaberTextBox";
             this.KontoinhaberTextBox.Size = new System.Drawing.Size(100, 20);
             this.KontoinhaberTextBox.TabIndex = 1;
+            this.KontoinhaberTextBox.TextChanged += new System.EventHandler(this.KontoinhaberTextBox_TextChanged);
             // 
             // KartenNrlabel
             // 
@@ -65,12 +67,23 @@
             this.KartenNrlTextBox.Name = "KartenNrlTextBox";
             this.KartenNrlTextBox.Size = new System.Drawing.Size(100, 20);
             this.KartenNrlTextBox.TabIndex = 3;
+            this.KartenNrlTextBox.TextChanged += new System.EventHandler(this.KartenNrlTextBox_TextChanged);
+            // 
+            // KreditkarteButton
+            // 
+            this.KreditkarteButton.Location = new System.Drawing.Point(7, 133);
+            this.KreditkarteButton.Name = "KreditkarteButton";
+            this.KreditkarteButton.Size = new System.Drawing.Size(131, 23);
+            this.KreditkarteButton.TabIndex = 4;
+            this.KreditkarteButton.Text = "Kreditkarte hinzufügen";
+            this.KreditkarteButton.UseVisualStyleBackColor = true;
             // 
             // AddCreditcardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(150, 168);
+            this.Controls.Add(this.KreditkarteButton);
             this.Controls.Add(this.KartenNrlTextBox);
             this.Controls.Add(this.KartenNrlabel);
             this.Controls.Add(this.KontoinhaberTextBox);
@@ -89,5 +102,6 @@
         private System.Windows.Forms.TextBox KontoinhaberTextBox;
         private System.Windows.Forms.Label KartenNrlabel;
         private System.Windows.Forms.TextBox KartenNrlTextBox;
+        private System.Windows.Forms.Button KreditkarteButton;
     }
 }

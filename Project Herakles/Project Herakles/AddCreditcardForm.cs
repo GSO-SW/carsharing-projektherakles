@@ -21,5 +21,15 @@ namespace Project_Herakles
         {
 
         }
+
+        private void KontoinhaberTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KartenNrlTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
