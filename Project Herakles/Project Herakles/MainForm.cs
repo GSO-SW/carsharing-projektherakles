@@ -15,8 +15,12 @@ namespace Project_Herakles
     {
         public MainForm()
         {
+            /*loginDialogForm login = new loginDialogForm
+            login.ShowDialog();
+            if(login.checkRights())
+            {*/
             InitializeComponent();
-
+            //}
         }
 
         private void AddUser_Click(object sender, EventArgs e)
@@ -27,8 +31,8 @@ namespace Project_Herakles
 
         private void buttonAddFahrzeug_Click(object sender, EventArgs e)
         {
-            AddUserForm hinzufügenFahrzeug = new AddUserForm();
-            addUser.ShowDialog();
+            FahrzeugDialogForm AddFahrzeug = new FahrzeugDialogForm();
+            AddFahrzeug.ShowDialog();
         }
     }
 }

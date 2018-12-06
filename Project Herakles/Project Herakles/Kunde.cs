@@ -12,7 +12,7 @@ namespace Project_Herakles
     {
         string name, email, adresse, passwort;
         int telefonNr;
-        internal void userHinzufügen(string name, int telefonNr,string email,string adresse,string passwort)
+        internal void userHinzufuegen(string name, int telefonNr,string email,string adresse,string passwort)
         {
             DBController DBC = new DBController();
             DBC.insertInToKunde(name, telefonNr, email, adresse, passwort);
@@ -24,11 +24,11 @@ namespace Project_Herakles
             DBC.updateDB("Kunde",spalte,name,newValue);
             MessageBox.Show("Kunde wurde in der Datenbank aktualisiert");
         }
-        internal void userLöschen(string name)
+        internal void userLoeschen(string name)
         {
             DBController DBC = new DBController();
             DBC.deleteFromDB("Kunde", "Name", name);
-            MessageBox.Show("Kunde wurde in der Datenbank gelöscht");
+            MessageBox.Show("Kunde wurde in der Datenbank geloescht");
         }
     }
 }

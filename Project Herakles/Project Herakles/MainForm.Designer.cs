@@ -36,17 +36,17 @@
             // 
             this.AddUser.Location = new System.Drawing.Point(12, 12);
             this.AddUser.Name = "AddUser";
-            this.AddUser.Size = new System.Drawing.Size(101, 23);
+            this.AddUser.Size = new System.Drawing.Size(120, 23);
             this.AddUser.TabIndex = 0;
-            this.AddUser.Text = "KundeHinzufügen";
+            this.AddUser.Text = "Kunde Hinzufügen";
             this.AddUser.UseVisualStyleBackColor = true;
             this.AddUser.Click += new System.EventHandler(this.AddUser_Click);
             // 
             // buttonAddFahrzeug
             // 
-            this.buttonAddFahrzeug.Location = new System.Drawing.Point(12, 52);
+            this.buttonAddFahrzeug.Location = new System.Drawing.Point(12, 41);
             this.buttonAddFahrzeug.Name = "buttonAddFahrzeug";
-            this.buttonAddFahrzeug.Size = new System.Drawing.Size(101, 34);
+            this.buttonAddFahrzeug.Size = new System.Drawing.Size(120, 23);
             this.buttonAddFahrzeug.TabIndex = 1;
             this.buttonAddFahrzeug.Text = "Fahrzeug Hinzufügen";
             this.buttonAddFahrzeug.UseVisualStyleBackColor = true;
