@@ -12,6 +12,7 @@ namespace Project_Herakles
 {
     public partial class AddUserForm : Form
     {
+        private int Admin = 1;
         public AddUserForm()
         {
             InitializeComponent();
@@ -21,7 +22,7 @@ namespace Project_Herakles
         {
             this.Close();
             Kunde kunde = new Kunde();
-            kunde.UserHinzufuegen(NameTextBox.Text, Convert.ToInt32(TelefonNrTextBox.Text), EMailTextBox.Text, AdresseTextBox.Text, PasswordtextBox.Text);
+            kunde.UserHinzufuegen(NameTextBox.Text, Convert.ToInt32(TelefonNrTextBox.Text), EMailTextBox.Text, StrasseTextBox.Text, Convert.ToInt32(HausNrTextBox.Text),OrttextBox.Text, Convert.ToInt32(PLZtextBox.Text), PasswordtextBox.Text, LoginNameTextBox.Text, Admin);
         }
 
         private void NameTextBox_TextChanged(object sender, EventArgs e)
@@ -72,17 +73,63 @@ namespace Project_Herakles
             }
 
         }
-
-        private void AdresseTextBox_TextChanged(object sender, EventArgs e)
+        private void OrttextBox_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                Convert.ToString(AdresseTextBox.Text);
+                Convert.ToString(OrttextBox.Text);
             }
             catch (Exception)
             {
-                AdresseTextBox.Clear();
-                if (AdresseTextBox.TextLength > 0)
+                OrttextBox.Clear();
+                if (OrttextBox.TextLength > 0)
+                {
+                    MessageBox.Show("Eingabe kann nicht verarbeitet werden");
+                }
+            }
+        }
+
+        private void PLZtextBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Convert.ToInt32(PLZtextBox.Text);
+            }
+            catch (Exception)
+            {
+                PLZtextBox.Clear();
+                if (PLZtextBox.TextLength > 0)
+                {
+                    MessageBox.Show("Eingabe kann nicht verarbeitet werden");
+                }
+            }
+        }
+
+        private void StrasseTextBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Convert.ToString(StrasseTextBox.Text);
+            }
+            catch (Exception)
+            {
+                StrasseTextBox.Clear();
+                if (StrasseTextBox.TextLength > 0)
+                {
+                    MessageBox.Show("Eingabe kann nicht verarbeitet werden");
+                }
+            }
+        }
+        private void HausNrTextBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Convert.ToInt32(HausNrTextBox.Text);
+            }
+            catch (Exception)
+            {
+                HausNrTextBox.Clear();
+                if (HausNrTextBox.TextLength > 0)
                 {
                     MessageBox.Show("Eingabe kann nicht verarbeitet werden");
                 }
@@ -105,6 +152,18 @@ namespace Project_Herakles
                 {
                     MessageBox.Show("Eingabe kann nicht verarbeitet werden");
                 }
+            }
+        }
+
+        private void AdminCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (AdminCheckBox.Checked == true)
+            {
+                Admin = 2;
+            }
+            if (AdminCheckBox.Checked == false)
+            {
+                Admin = 1;
             }
         }
     }
