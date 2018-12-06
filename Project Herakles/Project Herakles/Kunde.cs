@@ -14,20 +14,20 @@ namespace Project_Herakles
         int telefonNr;
 
 
-        internal void UserHinzufuegen(string name, int telefonNr,string email,string adresse,string passwort)
+        internal void UserHinzufuegen(string name, int telefonNr, string email, string Strasse, int Hausnummer, string Ort, int PLZ, string passwort)
 
         {
             DBController DBC = new DBController();
-            DBC.insertInToKunde(name, telefonNr, email, adresse, passwort);
+            DBC.insertInToKunde(name, telefonNr, email, Strasse, Hausnummer, Ort, PLZ, passwort);
             MessageBox.Show("Kunde zur Datenbank hinzugef�gt");
         }
-        internal void userBearbeiten(string spalte,string name, string newValue)
+        internal void userBearbeiten(string spalte, string name, string newValue)
         {
             DBController DBC = new DBController();
-            DBC.updateDB("Kunde",spalte,name,newValue);
+            DBC.updateDB("Kunde", spalte, name, newValue);
             MessageBox.Show("Kunde wurde in der Datenbank aktualisiert");
         }
- Form-user-Hinzufügen
+
         internal void UserLoeschen(string name)
 
         {

@@ -21,7 +21,7 @@ namespace Project_Herakles
         {
             this.Close();
             Kunde kunde = new Kunde();
-            kunde.UserHinzufuegen(NameTextBox.Text, Convert.ToInt32(TelefonNrTextBox.Text), EMailTextBox.Text, AdresseTextBox.Text, PasswordtextBox.Text);
+            kunde.UserHinzufuegen(NameTextBox.Text, Convert.ToInt32(TelefonNrTextBox.Text), EMailTextBox.Text, StrasseTextBox.Text, Convert.ToInt32(HausNrTextBox.Text),OrttextBox.Text, Convert.ToInt32(PLZtextBox.Text), PasswordtextBox.Text);
         }
 
         private void NameTextBox_TextChanged(object sender, EventArgs e)
