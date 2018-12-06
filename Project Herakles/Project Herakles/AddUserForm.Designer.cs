@@ -45,6 +45,8 @@
             this.PLZtextBox = new System.Windows.Forms.TextBox();
             this.StrasseLabel = new System.Windows.Forms.Label();
             this.StrasseTextBox = new System.Windows.Forms.TextBox();
+            this.HausNrLabel = new System.Windows.Forms.Label();
+            this.HausNrTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // NameTextBox
@@ -162,6 +164,7 @@
             this.OrttextBox.Name = "OrttextBox";
             this.OrttextBox.Size = new System.Drawing.Size(100, 20);
             this.OrttextBox.TabIndex = 15;
+            this.OrttextBox.TextChanged += new System.EventHandler(this.OrttextBox_TextChanged);
             // 
             // PLZlabel
             // 
@@ -178,6 +181,7 @@
             this.PLZtextBox.Name = "PLZtextBox";
             this.PLZtextBox.Size = new System.Drawing.Size(100, 20);
             this.PLZtextBox.TabIndex = 17;
+            this.PLZtextBox.TextChanged += new System.EventHandler(this.PLZtextBox_TextChanged);
             // 
             // StrasseLabel
             // 
@@ -194,12 +198,32 @@
             this.StrasseTextBox.Name = "StrasseTextBox";
             this.StrasseTextBox.Size = new System.Drawing.Size(100, 20);
             this.StrasseTextBox.TabIndex = 19;
+            this.StrasseTextBox.TextChanged += new System.EventHandler(this.StrasseTextBox_TextChanged);
+            // 
+            // HausNrLabel
+            // 
+            this.HausNrLabel.AutoSize = true;
+            this.HausNrLabel.Location = new System.Drawing.Point(302, 159);
+            this.HausNrLabel.Name = "HausNrLabel";
+            this.HausNrLabel.Size = new System.Drawing.Size(43, 13);
+            this.HausNrLabel.TabIndex = 20;
+            this.HausNrLabel.Text = "HausNr";
+            // 
+            // HausNrTextBox
+            // 
+            this.HausNrTextBox.Location = new System.Drawing.Point(305, 174);
+            this.HausNrTextBox.Name = "HausNrTextBox";
+            this.HausNrTextBox.Size = new System.Drawing.Size(100, 20);
+            this.HausNrTextBox.TabIndex = 21;
+            this.HausNrTextBox.TextChanged += new System.EventHandler(this.HausNrTextBox_TextChanged);
             // 
             // AddUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.HausNrTextBox);
+            this.Controls.Add(this.HausNrLabel);
             this.Controls.Add(this.StrasseTextBox);
             this.Controls.Add(this.StrasseLabel);
             this.Controls.Add(this.PLZtextBox);
@@ -243,5 +267,7 @@
         private System.Windows.Forms.TextBox PLZtextBox;
         private System.Windows.Forms.Label StrasseLabel;
         private System.Windows.Forms.TextBox StrasseTextBox;
+        private System.Windows.Forms.Label HausNrLabel;
+        private System.Windows.Forms.TextBox HausNrTextBox;
     }
 }

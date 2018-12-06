@@ -63,7 +63,8 @@ namespace Project_Herakles
                 Convert.ToInt32(TelefonNrTextBox.Text);
             }
             catch (Exception)
-            {                TelefonNrTextBox.Clear();
+            {
+                TelefonNrTextBox.Clear();
                 if (TelefonNrTextBox.TextLength > 0)
                 {
                     MessageBox.Show("Eingabe kann nicht verarbeitet werden");
@@ -71,17 +72,63 @@ namespace Project_Herakles
             }
 
         }
-
-        private void AdresseTextBox_TextChanged(object sender, EventArgs e)
+        private void OrttextBox_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                Convert.ToString(AdresseTextBox.Text);
+                Convert.ToString(OrttextBox.Text);
             }
             catch (Exception)
             {
-                AdresseTextBox.Clear();
-                if (AdresseTextBox.TextLength > 0)
+                OrttextBox.Clear();
+                if (OrttextBox.TextLength > 0)
+                {
+                    MessageBox.Show("Eingabe kann nicht verarbeitet werden");
+                }
+            }
+        }
+
+        private void PLZtextBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Convert.ToInt32(PLZtextBox.Text);
+            }
+            catch (Exception)
+            {
+                PLZtextBox.Clear();
+                if (PLZtextBox.TextLength > 0)
+                {
+                    MessageBox.Show("Eingabe kann nicht verarbeitet werden");
+                }
+            }
+        }
+
+        private void StrasseTextBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Convert.ToString(StrasseTextBox.Text);
+            }
+            catch (Exception)
+            {
+                StrasseTextBox.Clear();
+                if (StrasseTextBox.TextLength > 0)
+                {
+                    MessageBox.Show("Eingabe kann nicht verarbeitet werden");
+                }
+            }
+        }
+        private void HausNrTextBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Convert.ToInt32(HausNrTextBox.Text);
+            }
+            catch (Exception)
+            {
+                HausNrTextBox.Clear();
+                if (HausNrTextBox.TextLength > 0)
                 {
                     MessageBox.Show("Eingabe kann nicht verarbeitet werden");
                 }
@@ -106,5 +153,7 @@ namespace Project_Herakles
                 }
             }
         }
+
+
     }
 }
