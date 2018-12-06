@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 21. Nov 2018 um 16:03
+-- Erstellungszeit: 06. Dez 2018 um 15:50
 -- Server-Version: 10.1.37-MariaDB
 -- PHP-Version: 7.2.12
 
@@ -93,6 +93,13 @@ CREATE TABLE `rechte` (
   `Name` text COLLATE latin1_german1_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
 
+--
+-- Daten für Tabelle `rechte`
+--
+
+INSERT INTO `rechte` (`RechteID`, `Name`) VALUES
+(1, 'User');
+
 -- --------------------------------------------------------
 
 --
@@ -104,11 +111,19 @@ CREATE TABLE `user` (
   `RechteID` int(11) NOT NULL,
   `Name` char(100) COLLATE latin1_german1_ci NOT NULL,
   `TelefonNr` int(11) NOT NULL,
-  `E-Mail` char(100) COLLATE latin1_german1_ci NOT NULL,
+  `EMail` char(100) COLLATE latin1_german1_ci NOT NULL,
   `Adresse` char(100) COLLATE latin1_german1_ci NOT NULL,
   `ZahlungsID` int(11) NOT NULL,
-  `Passwort` char(100) COLLATE latin1_german1_ci NOT NULL
+  `Passwort` char(100) COLLATE latin1_german1_ci NOT NULL,
+  `LoginName` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
+
+--
+-- Daten für Tabelle `user`
+--
+
+INSERT INTO `user` (`AccountID`, `RechteID`, `Name`, `TelefonNr`, `EMail`, `Adresse`, `ZahlungsID`, `Passwort`, `LoginName`) VALUES
+(5, 1, 'Marvin Kutz', 1775666, 'MK@gmx.de', 'Am Ring 4', 1, 'Geheim', 0);
 
 -- --------------------------------------------------------
 
@@ -167,7 +182,8 @@ ALTER TABLE `user`
   ADD UNIQUE KEY `RechteID` (`RechteID`),
   ADD UNIQUE KEY `ZahlungsID` (`ZahlungsID`),
   ADD UNIQUE KEY `RechteID_2` (`RechteID`,`ZahlungsID`),
-  ADD UNIQUE KEY `RechteID_3` (`RechteID`,`ZahlungsID`);
+  ADD UNIQUE KEY `RechteID_3` (`RechteID`,`ZahlungsID`),
+  ADD UNIQUE KEY `LoginName` (`LoginName`);
 
 --
 -- Indizes für die Tabelle `zahlung`
@@ -207,13 +223,13 @@ ALTER TABLE `paypal`
 -- AUTO_INCREMENT für Tabelle `rechte`
 --
 ALTER TABLE `rechte`
-  MODIFY `RechteID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `RechteID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT für Tabelle `user`
 --
 ALTER TABLE `user`
-  MODIFY `AccountID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `AccountID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints der exportierten Tabellen
@@ -236,7 +252,6 @@ ALTER TABLE `paypal`
 -- Constraints der Tabelle `user`
 --
 ALTER TABLE `user`
-  ADD CONSTRAINT `user_ibfk_2` FOREIGN KEY (`ZahlungsID`) REFERENCES `zahlung` (`ZahlungID`),
   ADD CONSTRAINT `user_ibfk_3` FOREIGN KEY (`RechteID`) REFERENCES `rechte` (`RechteID`);
 
 --
