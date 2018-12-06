@@ -98,8 +98,8 @@ CREATE TABLE `rechte` (
 --
 
 INSERT INTO `rechte` (`RechteID`, `Name`) VALUES
-(1, 'User');
-
+(1, 'User'),
+(2, 'Admin');
 -- --------------------------------------------------------
 
 --
@@ -124,9 +124,6 @@ CREATE TABLE `user` (
 --
 -- Daten für Tabelle `user`
 --
-
-INSERT INTO `user` (`AccountID`, `RechteID`, `Name`, `TelefonNr`, `EMail`, `Hausnummer`, `ORT`, `PLZ`, `Strasse`, `ZahlungsID`, `Passwort`, `LoginName`) VALUES
-(5, 1, 'Marvin Kutz', 1775666, 'MK@gmx.de', 0, '', 0, 'Am Ring 4', 1, 'Geheim', 0);
 
 -- --------------------------------------------------------
 
