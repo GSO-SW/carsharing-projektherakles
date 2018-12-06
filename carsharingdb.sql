@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 06. Dez 2018 um 16:04
+-- Erstellungszeit: 06. Dez 2018 um 16:56
 -- Server-Version: 10.1.37-MariaDB
 -- PHP-Version: 7.2.12
 
@@ -100,6 +100,7 @@ CREATE TABLE `rechte` (
 INSERT INTO `rechte` (`RechteID`, `Name`) VALUES
 (1, 'User'),
 (2, 'Admin');
+
 -- --------------------------------------------------------
 
 --
@@ -118,12 +119,8 @@ CREATE TABLE `user` (
   `Strasse` char(100) COLLATE latin1_german1_ci NOT NULL,
   `ZahlungsID` int(11) NOT NULL,
   `Passwort` char(100) COLLATE latin1_german1_ci NOT NULL,
-  `LoginName` int(100) NOT NULL
+  `LoginName` varchar(100) COLLATE latin1_german1_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
-
---
--- Daten für Tabelle `user`
---
 
 -- --------------------------------------------------------
 
@@ -223,13 +220,13 @@ ALTER TABLE `paypal`
 -- AUTO_INCREMENT für Tabelle `rechte`
 --
 ALTER TABLE `rechte`
-  MODIFY `RechteID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `RechteID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT für Tabelle `user`
 --
 ALTER TABLE `user`
-  MODIFY `AccountID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `AccountID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints der exportierten Tabellen
