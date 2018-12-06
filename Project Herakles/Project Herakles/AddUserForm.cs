@@ -63,8 +63,7 @@ namespace Project_Herakles
                 Convert.ToInt32(TelefonNrTextBox.Text);
             }
             catch (Exception)
-            {
-                TelefonNrTextBox.Clear();
+            {                TelefonNrTextBox.Clear();
                 if (TelefonNrTextBox.TextLength > 0)
                 {
                     MessageBox.Show("Eingabe kann nicht verarbeitet werden");

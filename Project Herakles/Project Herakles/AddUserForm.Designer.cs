@@ -34,126 +34,101 @@
             this.TelefonNrTextBox = new System.Windows.Forms.TextBox();
             this.EMailLabel = new System.Windows.Forms.Label();
             this.EMailTextBox = new System.Windows.Forms.TextBox();
-            this.AdresseLabel = new System.Windows.Forms.Label();
-            this.AdresseTextBox = new System.Windows.Forms.TextBox();
             this.ZahlungsartLabel = new System.Windows.Forms.Label();
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.PasswordtextBox = new System.Windows.Forms.TextBox();
             this.FinishButton = new System.Windows.Forms.Button();
             this.ZahlungsartlistBox = new System.Windows.Forms.ListBox();
+            this.Ortlabel = new System.Windows.Forms.Label();
+            this.OrttextBox = new System.Windows.Forms.TextBox();
+            this.PLZlabel = new System.Windows.Forms.Label();
+            this.PLZtextBox = new System.Windows.Forms.TextBox();
+            this.StrasseLabel = new System.Windows.Forms.Label();
+            this.StrasseTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // NameTextBox
             // 
-            this.NameTextBox.Location = new System.Drawing.Point(20, 31);
-            this.NameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NameTextBox.Location = new System.Drawing.Point(15, 25);
             this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.Size = new System.Drawing.Size(132, 22);
+            this.NameTextBox.Size = new System.Drawing.Size(100, 20);
             this.NameTextBox.TabIndex = 0;
             this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
             // 
             // Namelabel
             // 
             this.Namelabel.AutoSize = true;
-            this.Namelabel.Location = new System.Drawing.Point(16, 11);
-            this.Namelabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Namelabel.Location = new System.Drawing.Point(12, 9);
             this.Namelabel.Name = "Namelabel";
-            this.Namelabel.Size = new System.Drawing.Size(45, 17);
+            this.Namelabel.Size = new System.Drawing.Size(35, 13);
             this.Namelabel.TabIndex = 1;
             this.Namelabel.Text = "Name";
             // 
             // TelefonNr
             // 
             this.TelefonNr.AutoSize = true;
-            this.TelefonNr.Location = new System.Drawing.Point(16, 71);
-            this.TelefonNr.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TelefonNr.Location = new System.Drawing.Point(12, 58);
             this.TelefonNr.Name = "TelefonNr";
-            this.TelefonNr.Size = new System.Drawing.Size(71, 17);
+            this.TelefonNr.Size = new System.Drawing.Size(54, 13);
             this.TelefonNr.TabIndex = 2;
             this.TelefonNr.Text = "TelefonNr";
             // 
             // TelefonNrTextBox
             // 
-            this.TelefonNrTextBox.Location = new System.Drawing.Point(20, 91);
-            this.TelefonNrTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TelefonNrTextBox.Location = new System.Drawing.Point(15, 74);
             this.TelefonNrTextBox.Name = "TelefonNrTextBox";
-            this.TelefonNrTextBox.Size = new System.Drawing.Size(132, 22);
+            this.TelefonNrTextBox.Size = new System.Drawing.Size(100, 20);
             this.TelefonNrTextBox.TabIndex = 3;
             this.TelefonNrTextBox.TextChanged += new System.EventHandler(this.TelefonNrTextBox_TextChanged);
             // 
             // EMailLabel
             // 
             this.EMailLabel.AutoSize = true;
-            this.EMailLabel.Location = new System.Drawing.Point(217, 11);
-            this.EMailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.EMailLabel.Location = new System.Drawing.Point(163, 9);
             this.EMailLabel.Name = "EMailLabel";
-            this.EMailLabel.Size = new System.Drawing.Size(42, 17);
+            this.EMailLabel.Size = new System.Drawing.Size(33, 13);
             this.EMailLabel.TabIndex = 4;
             this.EMailLabel.Text = "EMail";
             // 
             // EMailTextBox
             // 
-            this.EMailTextBox.Location = new System.Drawing.Point(221, 31);
-            this.EMailTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.EMailTextBox.Location = new System.Drawing.Point(166, 25);
             this.EMailTextBox.Name = "EMailTextBox";
-            this.EMailTextBox.Size = new System.Drawing.Size(132, 22);
+            this.EMailTextBox.Size = new System.Drawing.Size(100, 20);
             this.EMailTextBox.TabIndex = 5;
             this.EMailTextBox.TextChanged += new System.EventHandler(this.EMailTextBox_TextChanged);
-            // 
-            // AdresseLabel
-            // 
-            this.AdresseLabel.AutoSize = true;
-            this.AdresseLabel.Location = new System.Drawing.Point(217, 71);
-            this.AdresseLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.AdresseLabel.Name = "AdresseLabel";
-            this.AdresseLabel.Size = new System.Drawing.Size(60, 17);
-            this.AdresseLabel.TabIndex = 6;
-            this.AdresseLabel.Text = "Adresse";
-            // 
-            // AdresseTextBox
-            // 
-            this.AdresseTextBox.Location = new System.Drawing.Point(221, 91);
-            this.AdresseTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.AdresseTextBox.Name = "AdresseTextBox";
-            this.AdresseTextBox.Size = new System.Drawing.Size(132, 22);
-            this.AdresseTextBox.TabIndex = 7;
-            this.AdresseTextBox.TextChanged += new System.EventHandler(this.AdresseTextBox_TextChanged);
             // 
             // ZahlungsartLabel
             // 
             this.ZahlungsartLabel.AutoSize = true;
-            this.ZahlungsartLabel.Location = new System.Drawing.Point(16, 134);
-            this.ZahlungsartLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ZahlungsartLabel.Location = new System.Drawing.Point(12, 109);
             this.ZahlungsartLabel.Name = "ZahlungsartLabel";
-            this.ZahlungsartLabel.Size = new System.Drawing.Size(84, 17);
+            this.ZahlungsartLabel.Size = new System.Drawing.Size(63, 13);
             this.ZahlungsartLabel.TabIndex = 8;
             this.ZahlungsartLabel.Text = "Zahlungsart";
             // 
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Location = new System.Drawing.Point(217, 134);
-            this.PasswordLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PasswordLabel.Location = new System.Drawing.Point(11, 174);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(69, 17);
+            this.PasswordLabel.Size = new System.Drawing.Size(53, 13);
             this.PasswordLabel.TabIndex = 10;
             this.PasswordLabel.Text = "Password";
             // 
             // PasswordtextBox
             // 
-            this.PasswordtextBox.Location = new System.Drawing.Point(221, 154);
-            this.PasswordtextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PasswordtextBox.Location = new System.Drawing.Point(14, 190);
             this.PasswordtextBox.Name = "PasswordtextBox";
-            this.PasswordtextBox.Size = new System.Drawing.Size(132, 22);
+            this.PasswordtextBox.Size = new System.Drawing.Size(100, 20);
             this.PasswordtextBox.TabIndex = 11;
             this.PasswordtextBox.TextChanged += new System.EventHandler(this.PasswordtextBox_TextChanged);
             // 
             // FinishButton
             // 
-            this.FinishButton.Location = new System.Drawing.Point(920, 495);
-            this.FinishButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FinishButton.Location = new System.Drawing.Point(690, 402);
             this.FinishButton.Name = "FinishButton";
-            this.FinishButton.Size = new System.Drawing.Size(100, 28);
+            this.FinishButton.Size = new System.Drawing.Size(75, 23);
             this.FinishButton.TabIndex = 12;
             this.FinishButton.Text = "Hinzufügen";
             this.FinishButton.UseVisualStyleBackColor = true;
@@ -162,35 +137,86 @@
             // ZahlungsartlistBox
             // 
             this.ZahlungsartlistBox.FormattingEnabled = true;
-            this.ZahlungsartlistBox.ItemHeight = 16;
             this.ZahlungsartlistBox.Items.AddRange(new object[] {
             "PayPal",
             "Kreditkarte"});
-            this.ZahlungsartlistBox.Location = new System.Drawing.Point(19, 154);
+            this.ZahlungsartlistBox.Location = new System.Drawing.Point(14, 125);
+            this.ZahlungsartlistBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ZahlungsartlistBox.Name = "ZahlungsartlistBox";
-            this.ZahlungsartlistBox.Size = new System.Drawing.Size(133, 36);
+            this.ZahlungsartlistBox.Size = new System.Drawing.Size(101, 30);
             this.ZahlungsartlistBox.TabIndex = 13;
             this.ZahlungsartlistBox.SelectedIndexChanged += new System.EventHandler(this.ZahlungsartlistBox_SelectedIndexChanged);
             // 
+            // Ortlabel
+            // 
+            this.Ortlabel.AutoSize = true;
+            this.Ortlabel.Location = new System.Drawing.Point(163, 58);
+            this.Ortlabel.Name = "Ortlabel";
+            this.Ortlabel.Size = new System.Drawing.Size(21, 13);
+            this.Ortlabel.TabIndex = 14;
+            this.Ortlabel.Text = "Ort";
+            // 
+            // OrttextBox
+            // 
+            this.OrttextBox.Location = new System.Drawing.Point(166, 74);
+            this.OrttextBox.Name = "OrttextBox";
+            this.OrttextBox.Size = new System.Drawing.Size(100, 20);
+            this.OrttextBox.TabIndex = 15;
+            // 
+            // PLZlabel
+            // 
+            this.PLZlabel.AutoSize = true;
+            this.PLZlabel.Location = new System.Drawing.Point(163, 109);
+            this.PLZlabel.Name = "PLZlabel";
+            this.PLZlabel.Size = new System.Drawing.Size(27, 13);
+            this.PLZlabel.TabIndex = 16;
+            this.PLZlabel.Text = "PLZ";
+            // 
+            // PLZtextBox
+            // 
+            this.PLZtextBox.Location = new System.Drawing.Point(166, 125);
+            this.PLZtextBox.Name = "PLZtextBox";
+            this.PLZtextBox.Size = new System.Drawing.Size(100, 20);
+            this.PLZtextBox.TabIndex = 17;
+            // 
+            // StrasseLabel
+            // 
+            this.StrasseLabel.AutoSize = true;
+            this.StrasseLabel.Location = new System.Drawing.Point(163, 159);
+            this.StrasseLabel.Name = "StrasseLabel";
+            this.StrasseLabel.Size = new System.Drawing.Size(42, 13);
+            this.StrasseLabel.TabIndex = 18;
+            this.StrasseLabel.Text = "Strasse";
+            // 
+            // StrasseTextBox
+            // 
+            this.StrasseTextBox.Location = new System.Drawing.Point(166, 175);
+            this.StrasseTextBox.Name = "StrasseTextBox";
+            this.StrasseTextBox.Size = new System.Drawing.Size(100, 20);
+            this.StrasseTextBox.TabIndex = 19;
+            // 
             // AddUserForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.StrasseTextBox);
+            this.Controls.Add(this.StrasseLabel);
+            this.Controls.Add(this.PLZtextBox);
+            this.Controls.Add(this.PLZlabel);
+            this.Controls.Add(this.OrttextBox);
+            this.Controls.Add(this.Ortlabel);
             this.Controls.Add(this.ZahlungsartlistBox);
             this.Controls.Add(this.FinishButton);
             this.Controls.Add(this.PasswordtextBox);
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.ZahlungsartLabel);
-            this.Controls.Add(this.AdresseTextBox);
-            this.Controls.Add(this.AdresseLabel);
             this.Controls.Add(this.EMailTextBox);
             this.Controls.Add(this.EMailLabel);
             this.Controls.Add(this.TelefonNrTextBox);
             this.Controls.Add(this.TelefonNr);
             this.Controls.Add(this.Namelabel);
             this.Controls.Add(this.NameTextBox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AddUserForm";
             this.Text = "AddUserForm";
             this.ResumeLayout(false);
@@ -206,12 +232,16 @@
         private System.Windows.Forms.TextBox TelefonNrTextBox;
         private System.Windows.Forms.Label EMailLabel;
         private System.Windows.Forms.TextBox EMailTextBox;
-        private System.Windows.Forms.Label AdresseLabel;
-        private System.Windows.Forms.TextBox AdresseTextBox;
         private System.Windows.Forms.Label ZahlungsartLabel;
         private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.TextBox PasswordtextBox;
         private System.Windows.Forms.Button FinishButton;
         private System.Windows.Forms.ListBox ZahlungsartlistBox;
+        private System.Windows.Forms.Label Ortlabel;
+        private System.Windows.Forms.TextBox OrttextBox;
+        private System.Windows.Forms.Label PLZlabel;
+        private System.Windows.Forms.TextBox PLZtextBox;
+        private System.Windows.Forms.Label StrasseLabel;
+        private System.Windows.Forms.TextBox StrasseTextBox;
     }
 }
