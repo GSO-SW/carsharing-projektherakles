@@ -74,7 +74,6 @@ namespace Project_Herakles
                 }
             }
         }
-
         internal void deleteFromDB(string table,string column,string uniqueValue)
         {
             // create SqlConnection object
@@ -104,7 +103,6 @@ namespace Project_Herakles
                 }
             }
         }
-
         internal void insertToFahrzeug(string modell, string hersteller, string standort, string kennzeichen, string kraftstoff, double preis, int tankgroesse, int tankstand, int verbrauch)
         {
             // create SqlConnection object
@@ -113,15 +111,19 @@ namespace Project_Herakles
                 try
                 {
                     connection.Open();
-                    using (MySqlCommand command = new MySqlCommand("INSERT INTO fahrzeug (Modell,Name,TelefonNr,EMail,Adresse,Passwort,ZahlungsID) " +
-                        "VALUES (1, @Name, @TelefonNr, @EMail,@Adresse, @Passwort,1)", connection))
+                    using (MySqlCommand command = new MySqlCommand("INSERT INTO fahrzeug (Modell,Hersteller,Preis,Standort,Kennzeichen,Tankgröße,Tankstand,Verbrauch,Kraftstoff) " +
+                        "VALUES (@Modell,@Hersteller,@Preis,@Standort,@Kennzeichen,@Tankgröße,@Tankstand,@Verbrauch,@Kraftstoff)", connection))
                     {   /*Datenbank Tabellen attribut Name ist das 1. das 2. ist der variablen name*/
                         
-                        /*command.Parameters.Add(new MySqlParameter("Name", name));
-                        command.Parameters.Add(new MySqlParameter("TelefonNr", telefonNr));
-                        command.Parameters.Add(new MySqlParameter("EMail", email));
-                        command.Parameters.Add(new MySqlParameter("Adresse", adresse));
-                        command.Parameters.Add(new MySqlParameter("Passwort", password));*/
+                        command.Parameters.Add(new MySqlParameter("Modell", modell));
+                        command.Parameters.Add(new MySqlParameter("Hersteller", hersteller));
+                        command.Parameters.Add(new MySqlParameter("Preis", preis));
+                        command.Parameters.Add(new MySqlParameter("Standort", standort));
+                        command.Parameters.Add(new MySqlParameter("Kennzeichen", kennzeichen));
+                        command.Parameters.Add(new MySqlParameter("Tankgröße", tankgroesse));
+                        command.Parameters.Add(new MySqlParameter("Tankstand", tankstand));
+                        command.Parameters.Add(new MySqlParameter("Verbrauch", verbrauch));
+                        command.Parameters.Add(new MySqlParameter("Kraftstoff", kraftstoff));
                         command.ExecuteNonQuery();
                     }
                 }
