@@ -3,10 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 06. Dez 2018 um 15:50
+-- Erstellungszeit: 06. Dez 2018 um 16:19
 -- Server-Version: 10.1.37-MariaDB
 -- PHP-Version: 7.2.12
-
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -99,7 +98,8 @@ CREATE TABLE `rechte` (
 --
 
 INSERT INTO `rechte` (`RechteID`, `Name`) VALUES
-(1, 'User');
+(1, 'User'),
+(2, 'Admin');
 
 -- --------------------------------------------------------
 
@@ -113,20 +113,21 @@ CREATE TABLE `user` (
   `Name` char(100) COLLATE latin1_german1_ci NOT NULL,
   `TelefonNr` int(11) NOT NULL,
   `EMail` char(100) COLLATE latin1_german1_ci NOT NULL,
-  `Adresse` char(100) COLLATE latin1_german1_ci NOT NULL,
+  `Hausnummer` int(11) NOT NULL,
+  `ORT` varchar(100) COLLATE latin1_german1_ci NOT NULL,
+  `PLZ` int(11) NOT NULL,
+  `Strasse` char(100) COLLATE latin1_german1_ci NOT NULL,
   `ZahlungsID` int(11) NOT NULL,
   `Passwort` char(100) COLLATE latin1_german1_ci NOT NULL,
-
   `LoginName` int(100) NOT NULL
-
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
 
 --
 -- Daten für Tabelle `user`
 --
 
-INSERT INTO `user` (`AccountID`, `RechteID`, `Name`, `TelefonNr`, `EMail`, `Adresse`, `ZahlungsID`, `Passwort`, `LoginName`) VALUES
-(5, 1, 'Marvin Kutz', 1775666, 'MK@gmx.de', 'Am Ring 4', 1, 'Geheim', 0);
+INSERT INTO `user` (`AccountID`, `RechteID`, `Name`, `TelefonNr`, `EMail`, `Hausnummer`, `ORT`, `PLZ`, `Strasse`, `ZahlungsID`, `Passwort`, `LoginName`) VALUES
+(5, 1, 'Marvin Kutz', 1775666, 'MK@gmx.de', 0, '', 0, 'Am Ring 4', 1, 'Geheim', 0);
 
 -- --------------------------------------------------------
 
@@ -226,15 +227,13 @@ ALTER TABLE `paypal`
 -- AUTO_INCREMENT für Tabelle `rechte`
 --
 ALTER TABLE `rechte`
-  MODIFY `RechteID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `RechteID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT für Tabelle `user`
 --
 ALTER TABLE `user`
-
   MODIFY `AccountID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 
 --
 -- Constraints der exportierten Tabellen
