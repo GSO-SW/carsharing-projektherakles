@@ -18,7 +18,15 @@ namespace Project_Herakles
         }
         private void loginButton_Click(object sender, EventArgs e)
         {
-            
+            ControllerClass controllerClass = new ControllerClass();
+            if (controllerClass.Login(loginNameTextBox.Text, passwordTextBox.Text) == true)
+            {
+                this.Close();
+            }
+            else if (controllerClass.Login(loginNameTextBox.Text, passwordTextBox.Text) == false)
+            {
+                MessageBox.Show("Bitte erneut versuchen");
+            }
         }
         private void loginNameTextBox_TextChanged(object sender, EventArgs e)
         {
