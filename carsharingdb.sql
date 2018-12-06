@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 06. Dez 2018 um 16:54
+-- Erstellungszeit: 06. Dez 2018 um 17:01
 -- Server-Version: 10.1.37-MariaDB
 -- PHP-Version: 7.2.12
 
@@ -66,7 +66,6 @@ CREATE TABLE `kreditkarte` (
   `KreditkarteID` int(11) NOT NULL,
   `Kontoinhaber` int(11) NOT NULL,
   `KartenNr` int(11) NOT NULL,
-  `Auslaufdatum` date NOT NULL,
   `ZahlungID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
 
@@ -226,7 +225,7 @@ ALTER TABLE `rechte`
 -- AUTO_INCREMENT für Tabelle `user`
 --
 ALTER TABLE `user`
-  MODIFY `AccountID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `AccountID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints der exportierten Tabellen
