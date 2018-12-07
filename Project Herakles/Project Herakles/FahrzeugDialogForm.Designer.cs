@@ -140,7 +140,6 @@
             this.buttonAddFahrzeug.TabIndex = 10;
             this.buttonAddFahrzeug.Text = "Hinzufügen";
             this.buttonAddFahrzeug.UseVisualStyleBackColor = true;
-            this.buttonAddFahrzeug.Click += new System.EventHandler(this.buttonAddFahrzeug_Click);
             // 
             // textBoxVerbrauch
             // 
