@@ -31,8 +31,26 @@ namespace Project_Herakles
 
         private void buttonAddFahrzeug_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             FahrzeugDialogForm AddFahrzeug = new FahrzeugDialogForm();
             AddFahrzeug.ShowDialog();
+=======
+
+            LoginForm loginForm = new LoginForm();
+            loginForm.ShowDialog();
+            if (loginForm.login == true)
+            {
+                DBController dBController = new DBController();
+                dBController.deleteKunde(loginForm.loginName);
+            }
+            else
+            {
+                MessageBox.Show("User konnte nicht gelöscht werden!");
+            }
+
+
+
+>>>>>>> parent of 6e199ad... Beim löschen eines users wird überprüft, ob der löscher ein admin ist
         }
     }
 }
