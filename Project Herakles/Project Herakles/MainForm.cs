@@ -29,23 +29,10 @@ namespace Project_Herakles
             addUser.ShowDialog();
         }
 
-        private void deleteKundeButton_Click(object sender, EventArgs e)
+        private void buttonAddFahrzeug_Click(object sender, EventArgs e)
         {
-
-            LoginForm loginForm = new LoginForm();
-            loginForm.ShowDialog();
-            if (loginForm.login == true)
-            {
-                DBController dBController = new DBController();
-                dBController.deleteKunde(loginForm.loginName);
-            }
-            else
-            {
-                MessageBox.Show("User konnte nicht gelöscht werden!");
-            }
-
-
-
+            FahrzeugDialogForm AddFahrzeug = new FahrzeugDialogForm();
+            AddFahrzeug.ShowDialog();
         }
     }
 }
