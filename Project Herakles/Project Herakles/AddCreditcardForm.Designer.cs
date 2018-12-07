@@ -33,12 +33,14 @@
             this.KartenNrlabel = new System.Windows.Forms.Label();
             this.KartenNrlTextBox = new System.Windows.Forms.TextBox();
             this.KreditkarteButton = new System.Windows.Forms.Button();
+            this.labelHeadline = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // KontoinhaberLabel
             // 
+            this.KontoinhaberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.KontoinhaberLabel.AutoSize = true;
-            this.KontoinhaberLabel.Location = new System.Drawing.Point(12, 18);
+            this.KontoinhaberLabel.Location = new System.Drawing.Point(27, 43);
             this.KontoinhaberLabel.Name = "KontoinhaberLabel";
             this.KontoinhaberLabel.Size = new System.Drawing.Size(70, 13);
             this.KontoinhaberLabel.TabIndex = 0;
@@ -46,7 +48,8 @@
             // 
             // KontoinhaberTextBox
             // 
-            this.KontoinhaberTextBox.Location = new System.Drawing.Point(12, 34);
+            this.KontoinhaberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.KontoinhaberTextBox.Location = new System.Drawing.Point(27, 59);
             this.KontoinhaberTextBox.Name = "KontoinhaberTextBox";
             this.KontoinhaberTextBox.Size = new System.Drawing.Size(100, 20);
             this.KontoinhaberTextBox.TabIndex = 1;
@@ -54,8 +57,9 @@
             // 
             // KartenNrlabel
             // 
+            this.KartenNrlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.KartenNrlabel.AutoSize = true;
-            this.KartenNrlabel.Location = new System.Drawing.Point(9, 77);
+            this.KartenNrlabel.Location = new System.Drawing.Point(149, 43);
             this.KartenNrlabel.Name = "KartenNrlabel";
             this.KartenNrlabel.Size = new System.Drawing.Size(80, 13);
             this.KartenNrlabel.TabIndex = 2;
@@ -63,7 +67,8 @@
             // 
             // KartenNrlTextBox
             // 
-            this.KartenNrlTextBox.Location = new System.Drawing.Point(12, 93);
+            this.KartenNrlTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.KartenNrlTextBox.Location = new System.Drawing.Point(152, 59);
             this.KartenNrlTextBox.Name = "KartenNrlTextBox";
             this.KartenNrlTextBox.Size = new System.Drawing.Size(100, 20);
             this.KartenNrlTextBox.TabIndex = 3;
@@ -71,18 +76,34 @@
             // 
             // KreditkarteButton
             // 
-            this.KreditkarteButton.Location = new System.Drawing.Point(7, 133);
+            this.KreditkarteButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.KreditkarteButton.Location = new System.Drawing.Point(27, 94);
             this.KreditkarteButton.Name = "KreditkarteButton";
-            this.KreditkarteButton.Size = new System.Drawing.Size(131, 23);
+            this.KreditkarteButton.Size = new System.Drawing.Size(132, 24);
             this.KreditkarteButton.TabIndex = 4;
             this.KreditkarteButton.Text = "Kreditkarte hinzufügen";
             this.KreditkarteButton.UseVisualStyleBackColor = true;
+            // 
+            // labelHeadline
+            // 
+            this.labelHeadline.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.labelHeadline.AutoSize = true;
+            this.labelHeadline.BackColor = System.Drawing.Color.LightYellow;
+            this.labelHeadline.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHeadline.ForeColor = System.Drawing.Color.DarkMagenta;
+            this.labelHeadline.Location = new System.Drawing.Point(40, 9);
+            this.labelHeadline.Name = "labelHeadline";
+            this.labelHeadline.Size = new System.Drawing.Size(197, 24);
+            this.labelHeadline.TabIndex = 9;
+            this.labelHeadline.Text = "Kreditkarte hinzufügen";
             // 
             // AddCreditcardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(150, 168);
+            this.BackColor = System.Drawing.Color.LightYellow;
+            this.ClientSize = new System.Drawing.Size(275, 146);
+            this.Controls.Add(this.labelHeadline);
             this.Controls.Add(this.KreditkarteButton);
             this.Controls.Add(this.KartenNrlTextBox);
             this.Controls.Add(this.KartenNrlabel);
@@ -103,5 +124,6 @@
         private System.Windows.Forms.Label KartenNrlabel;
         private System.Windows.Forms.TextBox KartenNrlTextBox;
         private System.Windows.Forms.Button KreditkarteButton;
+        private System.Windows.Forms.Label labelHeadline;
     }
 }

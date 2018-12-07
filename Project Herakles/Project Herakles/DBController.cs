@@ -116,8 +116,6 @@ namespace Project_Herakles
                 try
                 {
                     connection.Open();
-                    MessageBox.Show("Verbindung Hergestellt");
-
                     using (MySqlCommand command = new MySqlCommand("INSERT INTO user (RechteID,Name,TelefonNr,EMail,Adresse,Passwort,ZahlungsID) " +
                         "VALUES (1, @Name, @TelefonNr, @EMail,@Adresse, @Passwort,1)", connection))
                     {   /*Datenbank Tabellen attribut Name ist das 1. das 2. ist der variablen name*/

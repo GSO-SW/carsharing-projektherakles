@@ -52,15 +52,17 @@
             // 
             // textBoxModell
             // 
-            this.textBoxModell.Location = new System.Drawing.Point(147, 102);
+            this.textBoxModell.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBoxModell.Location = new System.Drawing.Point(182, 70);
             this.textBoxModell.Name = "textBoxModell";
-            this.textBoxModell.Size = new System.Drawing.Size(100, 20);
+            this.textBoxModell.Size = new System.Drawing.Size(110, 20);
             this.textBoxModell.TabIndex = 0;
             // 
             // labelModell
             // 
+            this.labelModell.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.labelModell.AutoSize = true;
-            this.labelModell.Location = new System.Drawing.Point(147, 83);
+            this.labelModell.Location = new System.Drawing.Point(182, 51);
             this.labelModell.Name = "labelModell";
             this.labelModell.Size = new System.Drawing.Size(38, 13);
             this.labelModell.TabIndex = 1;
@@ -68,8 +70,9 @@
             // 
             // labelHersteller
             // 
+            this.labelHersteller.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.labelHersteller.AutoSize = true;
-            this.labelHersteller.Location = new System.Drawing.Point(24, 83);
+            this.labelHersteller.Location = new System.Drawing.Point(59, 51);
             this.labelHersteller.Name = "labelHersteller";
             this.labelHersteller.Size = new System.Drawing.Size(51, 13);
             this.labelHersteller.TabIndex = 3;
@@ -77,15 +80,17 @@
             // 
             // textBoxHersteller
             // 
-            this.textBoxHersteller.Location = new System.Drawing.Point(24, 102);
+            this.textBoxHersteller.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBoxHersteller.Location = new System.Drawing.Point(59, 70);
             this.textBoxHersteller.Name = "textBoxHersteller";
-            this.textBoxHersteller.Size = new System.Drawing.Size(100, 20);
+            this.textBoxHersteller.Size = new System.Drawing.Size(110, 20);
             this.textBoxHersteller.TabIndex = 2;
             // 
             // labelKraftstoff
             // 
+            this.labelKraftstoff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.labelKraftstoff.AutoSize = true;
-            this.labelKraftstoff.Location = new System.Drawing.Point(24, 176);
+            this.labelKraftstoff.Location = new System.Drawing.Point(59, 144);
             this.labelKraftstoff.Name = "labelKraftstoff";
             this.labelKraftstoff.Size = new System.Drawing.Size(49, 13);
             this.labelKraftstoff.TabIndex = 5;
@@ -93,8 +98,9 @@
             // 
             // labelKennzeichen
             // 
+            this.labelKennzeichen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.labelKennzeichen.AutoSize = true;
-            this.labelKennzeichen.Location = new System.Drawing.Point(24, 130);
+            this.labelKennzeichen.Location = new System.Drawing.Point(59, 98);
             this.labelKennzeichen.Name = "labelKennzeichen";
             this.labelKennzeichen.Size = new System.Drawing.Size(69, 13);
             this.labelKennzeichen.TabIndex = 7;
@@ -102,18 +108,20 @@
             // 
             // textBoxKennzeichen
             // 
-            this.textBoxKennzeichen.Location = new System.Drawing.Point(24, 146);
+            this.textBoxKennzeichen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBoxKennzeichen.Location = new System.Drawing.Point(59, 114);
             this.textBoxKennzeichen.Name = "textBoxKennzeichen";
-            this.textBoxKennzeichen.Size = new System.Drawing.Size(100, 20);
+            this.textBoxKennzeichen.Size = new System.Drawing.Size(110, 20);
             this.textBoxKennzeichen.TabIndex = 6;
             // 
             // labelHeadline
             // 
+            this.labelHeadline.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.labelHeadline.AutoSize = true;
             this.labelHeadline.BackColor = System.Drawing.Color.LightYellow;
             this.labelHeadline.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHeadline.ForeColor = System.Drawing.Color.DarkMagenta;
-            this.labelHeadline.Location = new System.Drawing.Point(19, 22);
+            this.labelHeadline.Location = new System.Drawing.Point(79, 18);
             this.labelHeadline.Name = "labelHeadline";
             this.labelHeadline.Size = new System.Drawing.Size(190, 24);
             this.labelHeadline.TabIndex = 8;
@@ -121,38 +129,44 @@
             // 
             // comboBoxKraftstoff
             // 
+            this.comboBoxKraftstoff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.comboBoxKraftstoff.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxKraftstoff.FormattingEnabled = true;
             this.comboBoxKraftstoff.Items.AddRange(new object[] {
             "Benzin",
             "Diesel",
+            "Elektro",
             "Gas"});
-            this.comboBoxKraftstoff.Location = new System.Drawing.Point(24, 192);
+            this.comboBoxKraftstoff.Location = new System.Drawing.Point(59, 160);
             this.comboBoxKraftstoff.Name = "comboBoxKraftstoff";
-            this.comboBoxKraftstoff.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxKraftstoff.Size = new System.Drawing.Size(110, 21);
             this.comboBoxKraftstoff.TabIndex = 9;
             // 
             // buttonAddFahrzeug
             // 
-            this.buttonAddFahrzeug.Location = new System.Drawing.Point(201, 415);
+            this.buttonAddFahrzeug.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAddFahrzeug.Location = new System.Drawing.Point(262, 349);
             this.buttonAddFahrzeug.Name = "buttonAddFahrzeug";
             this.buttonAddFahrzeug.Size = new System.Drawing.Size(75, 23);
             this.buttonAddFahrzeug.TabIndex = 10;
             this.buttonAddFahrzeug.Text = "Hinzufügen";
             this.buttonAddFahrzeug.UseVisualStyleBackColor = true;
+            this.buttonAddFahrzeug.Click += new System.EventHandler(this.buttonAddFahrzeug_Click_1);
             // 
             // textBoxVerbrauch
             // 
-            this.textBoxVerbrauch.Location = new System.Drawing.Point(147, 193);
+            this.textBoxVerbrauch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBoxVerbrauch.Location = new System.Drawing.Point(182, 161);
             this.textBoxVerbrauch.MaxLength = 20;
             this.textBoxVerbrauch.Name = "textBoxVerbrauch";
-            this.textBoxVerbrauch.Size = new System.Drawing.Size(100, 20);
+            this.textBoxVerbrauch.Size = new System.Drawing.Size(110, 20);
             this.textBoxVerbrauch.TabIndex = 11;
             // 
             // labelVerbrauch
             // 
+            this.labelVerbrauch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.labelVerbrauch.AutoSize = true;
-            this.labelVerbrauch.Location = new System.Drawing.Point(147, 176);
+            this.labelVerbrauch.Location = new System.Drawing.Point(182, 144);
             this.labelVerbrauch.Name = "labelVerbrauch";
             this.labelVerbrauch.Size = new System.Drawing.Size(97, 13);
             this.labelVerbrauch.TabIndex = 12;
@@ -160,8 +174,9 @@
             // 
             // labelStandort
             // 
+            this.labelStandort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.labelStandort.AutoSize = true;
-            this.labelStandort.Location = new System.Drawing.Point(24, 279);
+            this.labelStandort.Location = new System.Drawing.Point(59, 247);
             this.labelStandort.Name = "labelStandort";
             this.labelStandort.Size = new System.Drawing.Size(94, 13);
             this.labelStandort.TabIndex = 13;
@@ -169,16 +184,18 @@
             // 
             // textBoxStandort
             // 
-            this.textBoxStandort.Location = new System.Drawing.Point(24, 295);
+            this.textBoxStandort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBoxStandort.Location = new System.Drawing.Point(59, 263);
             this.textBoxStandort.MaxLength = 20;
             this.textBoxStandort.Name = "textBoxStandort";
-            this.textBoxStandort.Size = new System.Drawing.Size(100, 20);
+            this.textBoxStandort.Size = new System.Drawing.Size(110, 20);
             this.textBoxStandort.TabIndex = 14;
             // 
             // labelTankgroesse
             // 
+            this.labelTankgroesse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.labelTankgroesse.AutoSize = true;
-            this.labelTankgroesse.Location = new System.Drawing.Point(24, 226);
+            this.labelTankgroesse.Location = new System.Drawing.Point(59, 194);
             this.labelTankgroesse.Name = "labelTankgroesse";
             this.labelTankgroesse.Size = new System.Drawing.Size(109, 13);
             this.labelTankgroesse.TabIndex = 16;
@@ -186,16 +203,18 @@
             // 
             // textBoxTankgroesse
             // 
-            this.textBoxTankgroesse.Location = new System.Drawing.Point(24, 243);
+            this.textBoxTankgroesse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBoxTankgroesse.Location = new System.Drawing.Point(59, 211);
             this.textBoxTankgroesse.MaxLength = 20;
             this.textBoxTankgroesse.Name = "textBoxTankgroesse";
-            this.textBoxTankgroesse.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTankgroesse.Size = new System.Drawing.Size(110, 20);
             this.textBoxTankgroesse.TabIndex = 15;
             // 
             // labelTankstand
             // 
+            this.labelTankstand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.labelTankstand.AutoSize = true;
-            this.labelTankstand.Location = new System.Drawing.Point(147, 226);
+            this.labelTankstand.Location = new System.Drawing.Point(182, 194);
             this.labelTankstand.Name = "labelTankstand";
             this.labelTankstand.Size = new System.Drawing.Size(98, 13);
             this.labelTankstand.TabIndex = 18;
@@ -203,24 +222,27 @@
             // 
             // textBoxTankstand
             // 
-            this.textBoxTankstand.Location = new System.Drawing.Point(147, 243);
+            this.textBoxTankstand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBoxTankstand.Location = new System.Drawing.Point(182, 211);
             this.textBoxTankstand.MaxLength = 20;
             this.textBoxTankstand.Name = "textBoxTankstand";
-            this.textBoxTankstand.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTankstand.Size = new System.Drawing.Size(110, 20);
             this.textBoxTankstand.TabIndex = 17;
             // 
             // textBoxPreis
             // 
-            this.textBoxPreis.Location = new System.Drawing.Point(24, 345);
+            this.textBoxPreis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBoxPreis.Location = new System.Drawing.Point(59, 313);
             this.textBoxPreis.MaxLength = 20;
             this.textBoxPreis.Name = "textBoxPreis";
-            this.textBoxPreis.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPreis.Size = new System.Drawing.Size(110, 20);
             this.textBoxPreis.TabIndex = 20;
             // 
             // labelPreis
             // 
+            this.labelPreis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.labelPreis.AutoSize = true;
-            this.labelPreis.Location = new System.Drawing.Point(24, 329);
+            this.labelPreis.Location = new System.Drawing.Point(59, 297);
             this.labelPreis.Name = "labelPreis";
             this.labelPreis.Size = new System.Drawing.Size(71, 13);
             this.labelPreis.TabIndex = 19;
@@ -231,7 +253,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightYellow;
-            this.ClientSize = new System.Drawing.Size(288, 450);
+            this.ClientSize = new System.Drawing.Size(344, 381);
             this.Controls.Add(this.textBoxPreis);
             this.Controls.Add(this.labelPreis);
             this.Controls.Add(this.labelTankstand);

@@ -17,7 +17,7 @@ namespace Project_Herakles
             InitializeComponent();
         }
 
-        private void buttonAddFahrzeug_Click(object sender, EventArgs e)
+        private void buttonAddFahrzeug_Click_1(object sender, EventArgs e)
         {
             Fahrzeug fahrzeug = new Fahrzeug();
             try

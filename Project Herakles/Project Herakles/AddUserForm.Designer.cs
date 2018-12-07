@@ -146,7 +146,7 @@
             "PayPal",
             "Kreditkarte"});
             this.ZahlungsartlistBox.Location = new System.Drawing.Point(14, 125);
-            this.ZahlungsartlistBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ZahlungsartlistBox.Margin = new System.Windows.Forms.Padding(2);
             this.ZahlungsartlistBox.Name = "ZahlungsartlistBox";
             this.ZahlungsartlistBox.Size = new System.Drawing.Size(101, 30);
             this.ZahlungsartlistBox.TabIndex = 13;
@@ -251,6 +251,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightYellow;
             this.ClientSize = new System.Drawing.Size(262, 326);
             this.Controls.Add(this.AdminCheckBox);
             this.Controls.Add(this.LoginNameTextBox);

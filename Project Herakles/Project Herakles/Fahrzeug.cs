@@ -19,7 +19,6 @@ namespace Project_Herakles
         {
             DBController DBC = new DBController();
             DBC.insertToFahrzeug(modell, hersteller, standort, kennzeichen, kraftstoff, preis, tankgroesse, tankstand, verbrauch);
-            MessageBox.Show("Fahrzeug erfolgreich hinzugefügt");
         }
 
         internal void fahrzeugBearbeiten(string spalte, string uniquekey, string changedValue)
