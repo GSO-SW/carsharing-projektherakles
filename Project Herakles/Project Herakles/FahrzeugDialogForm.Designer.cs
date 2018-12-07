@@ -222,9 +222,9 @@
             this.labelPreis.AutoSize = true;
             this.labelPreis.Location = new System.Drawing.Point(24, 329);
             this.labelPreis.Name = "labelPreis";
-            this.labelPreis.Size = new System.Drawing.Size(89, 13);
+            this.labelPreis.Size = new System.Drawing.Size(71, 13);
             this.labelPreis.TabIndex = 19;
-            this.labelPreis.Text = "Preis (pro Minute)";
+            this.labelPreis.Text = "Preis (Einheit)";
             // 
             // FahrzeugDialogForm
             // 

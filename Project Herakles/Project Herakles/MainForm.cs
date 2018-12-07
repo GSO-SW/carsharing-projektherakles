@@ -31,6 +31,7 @@ namespace Project_Herakles
 
         private void buttonAddFahrzeug_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 
             LoginForm loginForm = new LoginForm();
             loginForm.ShowDialog();
@@ -48,5 +49,10 @@ namespace Project_Herakles
 
         }
 
+=======
+            FahrzeugDialogForm AddFahrzeug = new FahrzeugDialogForm();
+            AddFahrzeug.ShowDialog();
+        }
+>>>>>>> parent of 2a458fa... Form für Fahrzeug Informationen
     }
 }
