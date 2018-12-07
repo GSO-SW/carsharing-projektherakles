@@ -34,5 +34,11 @@ namespace Project_Herakles
             FahrzeugDialogForm AddFahrzeug = new FahrzeugDialogForm();
             AddFahrzeug.ShowDialog();
         }
+
+        private void buttonFahrzeugInformationen_Click(object sender, EventArgs e)
+        {
+            FahrzeugInformationenForm FahrzeugInfo = new FahrzeugInformationenForm();
+            FahrzeugInfo.ShowDialog();
+        }
     }
 }
