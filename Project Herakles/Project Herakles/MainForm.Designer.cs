@@ -30,6 +30,7 @@
         {
             this.AddUser = new System.Windows.Forms.Button();
             this.deleteKundeButton = new System.Windows.Forms.Button();
+            this.buttonAddFahrzeug = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AddUser
@@ -52,11 +53,22 @@
             this.deleteKundeButton.UseVisualStyleBackColor = true;
             this.deleteKundeButton.Click += new System.EventHandler(this.deleteKundeButton_Click);
             // 
+            // buttonAddFahrzeug
+            // 
+            this.buttonAddFahrzeug.Location = new System.Drawing.Point(12, 70);
+            this.buttonAddFahrzeug.Name = "buttonAddFahrzeug";
+            this.buttonAddFahrzeug.Size = new System.Drawing.Size(120, 23);
+            this.buttonAddFahrzeug.TabIndex = 2;
+            this.buttonAddFahrzeug.Text = "Fahrzeug hinzufügen";
+            this.buttonAddFahrzeug.UseVisualStyleBackColor = true;
+            this.buttonAddFahrzeug.Click += new System.EventHandler(this.buttonAddFahrzeug_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonAddFahrzeug);
             this.Controls.Add(this.deleteKundeButton);
             this.Controls.Add(this.AddUser);
             this.Name = "MainForm";
@@ -69,5 +81,6 @@
 
         private System.Windows.Forms.Button AddUser;
         private System.Windows.Forms.Button deleteKundeButton;
+        private System.Windows.Forms.Button buttonAddFahrzeug;
     }
 }

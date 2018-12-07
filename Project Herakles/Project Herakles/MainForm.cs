@@ -56,8 +56,12 @@ namespace Project_Herakles
 
         }
 
-
+        private void buttonAddFahrzeug_Click(object sender, EventArgs e)
+        {
+            FahrzeugDialogForm AddFahrzeug = new FahrzeugDialogForm();
+            AddFahrzeug.ShowDialog();
         }
+    }
 
     }
 
