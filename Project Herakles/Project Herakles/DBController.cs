@@ -11,7 +11,7 @@ namespace Project_Herakles
     class DBController
     {
         string connectionString = @"host=localhost;user=root;database=carsharingdb";
-
+       
         internal void insertInToKunde(string name, int telefonNr, string email, string adresse, string password)
         {
             // create SqlConnection object
@@ -114,7 +114,7 @@ namespace Project_Herakles
                     using (MySqlCommand command = new MySqlCommand("INSERT INTO fahrzeug (Modell,Hersteller,Preis,Standort,Kennzeichen,Tankgröße,Tankstand,Verbrauch,Kraftstoff) " +
                         "VALUES (@Modell,@Hersteller,@Preis,@Standort,@Kennzeichen,@Tankgröße,@Tankstand,@Verbrauch,@Kraftstoff)", connection))
                     {   /*Datenbank Tabellen attribut Name ist das 1. das 2. ist der variablen name*/
-
+                        
                         command.Parameters.Add(new MySqlParameter("Modell", modell));
                         command.Parameters.Add(new MySqlParameter("Hersteller", hersteller));
                         command.Parameters.Add(new MySqlParameter("Preis", preis));
