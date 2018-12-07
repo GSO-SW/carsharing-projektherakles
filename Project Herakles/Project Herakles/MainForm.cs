@@ -48,11 +48,14 @@ namespace Project_Herakles
 
 
         }
+<<<<<<< HEAD
 
 =======
             FahrzeugDialogForm AddFahrzeug = new FahrzeugDialogForm();
             AddFahrzeug.ShowDialog();
         }
+>>>>>>> parent of 2a458fa... Form für Fahrzeug Informationen
+=======
 >>>>>>> parent of 2a458fa... Form für Fahrzeug Informationen
     }
 }
