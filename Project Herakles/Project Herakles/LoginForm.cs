@@ -16,16 +16,21 @@ namespace Project_Herakles
         {
             InitializeComponent();
         }
+        public bool login { get; set; }
+        public string loginName { get; set; }
         private void loginButton_Click(object sender, EventArgs e)
         {
             ControllerClass controllerClass = new ControllerClass();
             if (controllerClass.Login(loginNameTextBox.Text, passwordTextBox.Text) == true)
             {
+                loginName = loginNameTextBox.Text;
+                this.login = true;
                 this.Close();
             }
-            else if (controllerClass.Login(loginNameTextBox.Text, passwordTextBox.Text) == false)
+            else
             {
-                MessageBox.Show("Bitte erneut versuchen");
+                this.login = false;
+                this.Close();
             }
         }
         private void loginNameTextBox_TextChanged(object sender, EventArgs e)
