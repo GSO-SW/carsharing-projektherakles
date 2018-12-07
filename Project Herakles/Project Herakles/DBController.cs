@@ -11,7 +11,7 @@ namespace Project_Herakles
     class DBController
     {
         string connectionString = @"host=localhost;user=root;database=carsharingdb";
-       
+
         internal void insertInToKunde(string name, int telefonNr, string email, string adresse, string password)
         {
             // create SqlConnection object
@@ -85,7 +85,10 @@ namespace Project_Herakles
                     connection.Open();
                     MessageBox.Show("Verbindung Hergestellt");
 
-                    using (MySqlCommand command = new MySqlCommand("DELETE FROM @Table WHERE @Column = @UniqueValue", connection))
+                    using (MySqlCommand command = new MySqlCommand("SELECT LoginName, Passwort" +
+                        "FROM user " +
+                        "WHERE LoginName = @LoginName" +
+                        "AND Passwort = @Password", connection))
                     {   /*Datenbank Tabellen attribut Name ist das 1. das 2. ist der variablen name*/
                         command.Parameters.Add(new MySqlParameter("Table", table));
                         command.Parameters.Add(new MySqlParameter("Column", column));
@@ -104,8 +107,7 @@ namespace Project_Herakles
                 }
             }
         }
-
-        internal void insertToFahrzeug(string modell, string hersteller, string standort, string kennzeichen, string kraftstoff, double preis, int tankgroesse, int tankstand, int verbrauch)
+        internal void deleteFromDB(string table, string column, string uniqueValue)
         {
             // create SqlConnection object
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -115,15 +117,11 @@ namespace Project_Herakles
                     connection.Open();
                     MessageBox.Show("Verbindung Hergestellt");
 
-                    using (MySqlCommand command = new MySqlCommand("INSERT INTO user (RechteID,Name,TelefonNr,EMail,Adresse,Passwort,ZahlungsID) " +
-                        "VALUES (1, @Name, @TelefonNr, @EMail,@Adresse, @Passwort,1)", connection))
+                    using (MySqlCommand command = new MySqlCommand("DELETE FROM @Table WHERE @Column = @UniqueValue", connection))
                     {   /*Datenbank Tabellen attribut Name ist das 1. das 2. ist der variablen name*/
-                        
-                        /*command.Parameters.Add(new MySqlParameter("Name", name));
-                        command.Parameters.Add(new MySqlParameter("TelefonNr", telefonNr));
-                        command.Parameters.Add(new MySqlParameter("EMail", email));
-                        command.Parameters.Add(new MySqlParameter("Adresse", adresse));
-                        command.Parameters.Add(new MySqlParameter("Passwort", password));*/
+                        command.Parameters.Add(new MySqlParameter("Table", table));
+                        command.Parameters.Add(new MySqlParameter("Column", column));
+                        command.Parameters.Add(new MySqlParameter("UniqueValue", uniqueValue));
                         command.ExecuteNonQuery();
                     }
                 }

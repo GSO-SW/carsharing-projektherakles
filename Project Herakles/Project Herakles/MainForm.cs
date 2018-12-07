@@ -31,10 +31,6 @@ namespace Project_Herakles
 
         private void buttonAddFahrzeug_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            FahrzeugDialogForm AddFahrzeug = new FahrzeugDialogForm();
-            AddFahrzeug.ShowDialog();
-=======
 
             LoginForm loginForm = new LoginForm();
             loginForm.ShowDialog();
@@ -50,13 +46,7 @@ namespace Project_Herakles
 
 
 
->>>>>>> parent of 6e199ad... Beim löschen eines users wird überprüft, ob der löscher ein admin ist
         }
 
-        private void buttonFahrzeugInformationen_Click(object sender, EventArgs e)
-        {
-            FahrzeugInformationenForm FahrzeugInfo = new FahrzeugInformationenForm();
-            FahrzeugInfo.ShowDialog();
-        }
     }
 }
