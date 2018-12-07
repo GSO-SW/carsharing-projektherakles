@@ -31,7 +31,7 @@ namespace Project_Herakles
 
         private void deleteKundeButton_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
+
 
             LoginForm loginForm = new LoginForm();
             loginForm.ShowDialog();
@@ -48,11 +48,9 @@ namespace Project_Herakles
 
 
         }
-<<<<<<< HEAD
+
 
         }
->>>>>>> parent of 2a458fa... Form für Fahrzeug Informationen
-=======
->>>>>>> parent of 2a458fa... Form für Fahrzeug Informationen
+
     }
-}
+
