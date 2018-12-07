@@ -15,8 +15,12 @@ namespace Project_Herakles
     {
         public MainForm()
         {
+            /*loginDialogForm login = new loginDialogForm
+            login.ShowDialog();
+            if(login.checkRights())
+            {*/
             InitializeComponent();
-
+            //}
         }
 
         private void AddUser_Click(object sender, EventArgs e)
@@ -27,6 +31,7 @@ namespace Project_Herakles
 
         private void deleteKundeButton_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 
             LoginForm loginForm = new LoginForm();
             loginForm.ShowDialog();
@@ -43,5 +48,11 @@ namespace Project_Herakles
 
 
         }
+<<<<<<< HEAD
+
+        }
+>>>>>>> parent of 2a458fa... Form für Fahrzeug Informationen
+=======
+>>>>>>> parent of 2a458fa... Form für Fahrzeug Informationen
     }
 }

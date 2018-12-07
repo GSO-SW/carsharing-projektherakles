@@ -133,5 +133,34 @@ namespace Project_Herakles
                 }
             }
         }
+        internal void deleteFromDB(string table, string column, string uniqueValue)
+        {
+            // create SqlConnection object
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    MessageBox.Show("Verbindung Hergestellt");
+
+                    using (MySqlCommand command = new MySqlCommand("DELETE FROM @Table WHERE @Column = @UniqueValue", connection))
+                    {   /*Datenbank Tabellen attribut Name ist das 1. das 2. ist der variablen name*/
+                        command.Parameters.Add(new MySqlParameter("Table", table));
+                        command.Parameters.Add(new MySqlParameter("Column", column));
+                        command.Parameters.Add(new MySqlParameter("UniqueValue", uniqueValue));
+                        command.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+                finally
+                {
+                    // close connection from database
+                    connection.Close();
+                }
+            }
+        }///hinzufügen eines Fahrzeuges in die Datenbank
     }
 }

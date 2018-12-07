@@ -18,14 +18,14 @@ namespace Project_Herakles
             if (dBController.checkLoginData(loginName, password) == true)
             {
                 MessageBox.Show("Login erfolgreich");
-                return true; 
+                return true;
             }
             else
             {
                 MessageBox.Show("Login fehlgeschlagen");
-                return false;     
+                return false;
             }
-            
+
         }
     }
 }
