@@ -38,7 +38,14 @@ namespace Project_Herakles
             if (loginForm.login == true)
             {
                 DBController dBController = new DBController();
-                dBController.deleteKunde(loginForm.loginName);
+                if (dBController.checkAdmin(loginForm.loginName) == true)
+                {
+                    dBController.deleteKunde(loginForm.loginName);
+                }
+                else
+                {
+                    MessageBox.Show("Sie haben keine Rechte!");
+                }
             }
             else
             {
