@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,64 @@ namespace Project_Herakles
     class DBController
     {
         string connectionString = @"host=localhost;user=root;database=carsharingdb";
+
+        internal DataSet selectFahrzeuge()
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                MessageBox.Show("Verbindung Hergestellt");
+
+                try
+                {
+                    using (MySqlDataAdapter dataAdapter = new MySqlDataAdapter("SELECT * FROM fahrzeug", connection))
+                    {
+                        // Use DataAdapter to fill DataTable
+                        DataSet fahrzeuge = new DataSet();
+                        dataAdapter.Fill(fahrzeuge);
+                        return fahrzeuge;
+                    }
+                }
+                catch (Exception e)
+                {
+
+                    throw e;
+                }
+                
+            }
+            //try
+            //{
+            //    using (MySqlConnection connection = new MySqlConnection(connectionString))
+            //    {
+            //        connection.Open();
+            //        MessageBox.Show("Verbindung Hergestellt");
+
+            //        MySqlCommand command = new MySqlCommand("SELECT hersteller " + "FROM fahrzeug " + "WHERE FahrzeugID = @FahrzeugID ", connection);
+            //        /*Datenbank Tabellen attribut Name ist das 1. das 2. ist der variablen name*/
+            //        command.Parameters.Add(new MySqlParameter("FahrzeugID", FahrzeugID));
+            //        command.ExecuteNonQuery();
+
+            //        object result = command.ExecuteScalar();
+            //        if (result != null)
+            //        {
+            //            connection.Close();
+            //            hersteller = Convert.ToString(result);
+            //            return hersteller;
+            //        }
+            //        else
+            //        {
+            //            connection.Close();
+            //            hersteller = null;
+            //            return hersteller;
+            //        }
+            //    }
+            //}
+            //catch (Exception)
+            //{
+            //    hersteller = null;
+            //    return hersteller;
+            //}
+        }
 
         internal void insertInToKunde(string name, int telefonNr, string email, string Strasse, int Hausnummer, string Ort, int PLZ, string passwort, string LoginName, int RechteID)
         {

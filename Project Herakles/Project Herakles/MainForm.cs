@@ -61,7 +61,25 @@ namespace Project_Herakles
             FahrzeugDialogForm AddFahrzeug = new FahrzeugDialogForm();
             AddFahrzeug.ShowDialog();
         }
+
+        private void listBoxFahrzeuge_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonFahrzeugeausDbinListbox_Click(object sender, EventArgs e)
+        {
+            DataSet fahrzeuge;
+            DBController dBController = new DBController();
+            fahrzeuge = dBController.selectFahrzeuge();
+
+            DataTable modell = fahrzeuge.Tables[0];
+           
+            listBoxFahrzeuge.DataSource = modell;
+            listBoxFahrzeuge.DisplayMember = "modell";
+            //listBoxFahrzeuge.ValueMember = "modell";
+        }
     }
 
-    }
+}
 
