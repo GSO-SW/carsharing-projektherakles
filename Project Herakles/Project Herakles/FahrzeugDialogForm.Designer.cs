@@ -155,9 +155,9 @@
             this.labelVerbrauch.AutoSize = true;
             this.labelVerbrauch.Location = new System.Drawing.Point(147, 176);
             this.labelVerbrauch.Name = "labelVerbrauch";
-            this.labelVerbrauch.Size = new System.Drawing.Size(96, 13);
+            this.labelVerbrauch.Size = new System.Drawing.Size(97, 13);
             this.labelVerbrauch.TabIndex = 12;
-            this.labelVerbrauch.Text = "Verbrauch (in Liter)";
+            this.labelVerbrauch.Text = "Kraftstoffverbrauch";
             // 
             // labelStandort
             // 
