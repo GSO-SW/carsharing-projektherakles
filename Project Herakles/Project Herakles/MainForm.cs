@@ -69,15 +69,15 @@ namespace Project_Herakles
 
         private void buttonFahrzeugeausDbinListbox_Click(object sender, EventArgs e)
         {
-            DataSet fahrzeuge;
+            DataSet fahrzeugSet;
             DBController dBController = new DBController();
-            fahrzeuge = dBController.selectFahrzeuge();
+            fahrzeugSet = dBController.selectFahrzeuge();
 
-            DataTable modell = fahrzeuge.Tables[0];
+            DataTable fahrzeuge = fahrzeugSet.Tables[0];
            
-            listBoxFahrzeuge.DataSource = modell;
-            listBoxFahrzeuge.DisplayMember = "modell";
             //listBoxFahrzeuge.ValueMember = "modell";
+            listBoxFahrzeuge.DataSource = fahrzeuge;
+            listBoxFahrzeuge.DisplayMember = "modell,FahrzeugID ";
         }
     }
 
