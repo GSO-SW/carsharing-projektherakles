@@ -54,7 +54,7 @@
             // buttonBuchen
             // 
             this.buttonBuchen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonBuchen.Location = new System.Drawing.Point(241, 332);
+            this.buttonBuchen.Location = new System.Drawing.Point(231, 326);
             this.buttonBuchen.Name = "buttonBuchen";
             this.buttonBuchen.Size = new System.Drawing.Size(75, 23);
             this.buttonBuchen.TabIndex = 0;
@@ -64,7 +64,7 @@
             // buttonAbbrechen
             // 
             this.buttonAbbrechen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAbbrechen.Location = new System.Drawing.Point(160, 332);
+            this.buttonAbbrechen.Location = new System.Drawing.Point(150, 326);
             this.buttonAbbrechen.Name = "buttonAbbrechen";
             this.buttonAbbrechen.Size = new System.Drawing.Size(75, 23);
             this.buttonAbbrechen.TabIndex = 1;
@@ -74,7 +74,7 @@
             // textBoxPreis
             // 
             this.textBoxPreis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPreis.Location = new System.Drawing.Point(142, 268);
+            this.textBoxPreis.Location = new System.Drawing.Point(156, 262);
             this.textBoxPreis.MaxLength = 20;
             this.textBoxPreis.Name = "textBoxPreis";
             this.textBoxPreis.ReadOnly = true;
@@ -85,7 +85,7 @@
             // 
             this.labelPreis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPreis.AutoSize = true;
-            this.labelPreis.Location = new System.Drawing.Point(142, 252);
+            this.labelPreis.Location = new System.Drawing.Point(156, 246);
             this.labelPreis.Name = "labelPreis";
             this.labelPreis.Size = new System.Drawing.Size(89, 13);
             this.labelPreis.TabIndex = 37;
@@ -95,7 +95,7 @@
             // 
             this.labelTankstand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTankstand.AutoSize = true;
-            this.labelTankstand.Location = new System.Drawing.Point(142, 199);
+            this.labelTankstand.Location = new System.Drawing.Point(156, 193);
             this.labelTankstand.Name = "labelTankstand";
             this.labelTankstand.Size = new System.Drawing.Size(98, 13);
             this.labelTankstand.TabIndex = 36;
@@ -104,7 +104,7 @@
             // textBoxTankstand
             // 
             this.textBoxTankstand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxTankstand.Location = new System.Drawing.Point(142, 216);
+            this.textBoxTankstand.Location = new System.Drawing.Point(156, 210);
             this.textBoxTankstand.MaxLength = 20;
             this.textBoxTankstand.Name = "textBoxTankstand";
             this.textBoxTankstand.ReadOnly = true;
@@ -115,7 +115,7 @@
             // 
             this.labelTankgroesse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTankgroesse.AutoSize = true;
-            this.labelTankgroesse.Location = new System.Drawing.Point(16, 199);
+            this.labelTankgroesse.Location = new System.Drawing.Point(30, 193);
             this.labelTankgroesse.Name = "labelTankgroesse";
             this.labelTankgroesse.Size = new System.Drawing.Size(109, 13);
             this.labelTankgroesse.TabIndex = 34;
@@ -124,7 +124,7 @@
             // textBoxTankgroesse
             // 
             this.textBoxTankgroesse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxTankgroesse.Location = new System.Drawing.Point(16, 216);
+            this.textBoxTankgroesse.Location = new System.Drawing.Point(30, 210);
             this.textBoxTankgroesse.MaxLength = 20;
             this.textBoxTankgroesse.Name = "textBoxTankgroesse";
             this.textBoxTankgroesse.ReadOnly = true;
@@ -134,7 +134,7 @@
             // textBoxStandort
             // 
             this.textBoxStandort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxStandort.Location = new System.Drawing.Point(16, 268);
+            this.textBoxStandort.Location = new System.Drawing.Point(30, 262);
             this.textBoxStandort.MaxLength = 20;
             this.textBoxStandort.Name = "textBoxStandort";
             this.textBoxStandort.ReadOnly = true;
@@ -145,7 +145,7 @@
             // 
             this.labelStandort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelStandort.AutoSize = true;
-            this.labelStandort.Location = new System.Drawing.Point(16, 252);
+            this.labelStandort.Location = new System.Drawing.Point(30, 246);
             this.labelStandort.Name = "labelStandort";
             this.labelStandort.Size = new System.Drawing.Size(94, 13);
             this.labelStandort.TabIndex = 31;
@@ -155,7 +155,7 @@
             // 
             this.labelVerbrauch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelVerbrauch.AutoSize = true;
-            this.labelVerbrauch.Location = new System.Drawing.Point(142, 149);
+            this.labelVerbrauch.Location = new System.Drawing.Point(156, 143);
             this.labelVerbrauch.Name = "labelVerbrauch";
             this.labelVerbrauch.Size = new System.Drawing.Size(96, 13);
             this.labelVerbrauch.TabIndex = 30;
@@ -164,7 +164,7 @@
             // textBoxVerbrauch
             // 
             this.textBoxVerbrauch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxVerbrauch.Location = new System.Drawing.Point(142, 166);
+            this.textBoxVerbrauch.Location = new System.Drawing.Point(156, 159);
             this.textBoxVerbrauch.MaxLength = 20;
             this.textBoxVerbrauch.Name = "textBoxVerbrauch";
             this.textBoxVerbrauch.ReadOnly = true;
@@ -175,7 +175,7 @@
             // 
             this.labelKennzeichen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelKennzeichen.AutoSize = true;
-            this.labelKennzeichen.Location = new System.Drawing.Point(16, 103);
+            this.labelKennzeichen.Location = new System.Drawing.Point(30, 97);
             this.labelKennzeichen.Name = "labelKennzeichen";
             this.labelKennzeichen.Size = new System.Drawing.Size(69, 13);
             this.labelKennzeichen.TabIndex = 27;
@@ -184,7 +184,7 @@
             // textBoxKennzeichen
             // 
             this.textBoxKennzeichen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxKennzeichen.Location = new System.Drawing.Point(16, 119);
+            this.textBoxKennzeichen.Location = new System.Drawing.Point(30, 113);
             this.textBoxKennzeichen.Name = "textBoxKennzeichen";
             this.textBoxKennzeichen.ReadOnly = true;
             this.textBoxKennzeichen.Size = new System.Drawing.Size(100, 20);
@@ -194,7 +194,7 @@
             // 
             this.labelKraftstoff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelKraftstoff.AutoSize = true;
-            this.labelKraftstoff.Location = new System.Drawing.Point(16, 149);
+            this.labelKraftstoff.Location = new System.Drawing.Point(30, 143);
             this.labelKraftstoff.Name = "labelKraftstoff";
             this.labelKraftstoff.Size = new System.Drawing.Size(49, 13);
             this.labelKraftstoff.TabIndex = 25;
@@ -204,7 +204,7 @@
             // 
             this.labelHersteller.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelHersteller.AutoSize = true;
-            this.labelHersteller.Location = new System.Drawing.Point(16, 56);
+            this.labelHersteller.Location = new System.Drawing.Point(30, 53);
             this.labelHersteller.Name = "labelHersteller";
             this.labelHersteller.Size = new System.Drawing.Size(51, 13);
             this.labelHersteller.TabIndex = 24;
@@ -213,7 +213,7 @@
             // textBoxHersteller
             // 
             this.textBoxHersteller.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxHersteller.Location = new System.Drawing.Point(16, 75);
+            this.textBoxHersteller.Location = new System.Drawing.Point(30, 69);
             this.textBoxHersteller.Name = "textBoxHersteller";
             this.textBoxHersteller.ReadOnly = true;
             this.textBoxHersteller.Size = new System.Drawing.Size(100, 20);
@@ -223,7 +223,7 @@
             // 
             this.labelModell.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelModell.AutoSize = true;
-            this.labelModell.Location = new System.Drawing.Point(139, 56);
+            this.labelModell.Location = new System.Drawing.Point(153, 50);
             this.labelModell.Name = "labelModell";
             this.labelModell.Size = new System.Drawing.Size(38, 13);
             this.labelModell.TabIndex = 22;
@@ -232,7 +232,7 @@
             // textBoxModell
             // 
             this.textBoxModell.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxModell.Location = new System.Drawing.Point(142, 75);
+            this.textBoxModell.Location = new System.Drawing.Point(156, 69);
             this.textBoxModell.Name = "textBoxModell";
             this.textBoxModell.ReadOnly = true;
             this.textBoxModell.Size = new System.Drawing.Size(100, 20);
@@ -241,7 +241,7 @@
             // textBoxKraftstoff
             // 
             this.textBoxKraftstoff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxKraftstoff.Location = new System.Drawing.Point(19, 166);
+            this.textBoxKraftstoff.Location = new System.Drawing.Point(30, 159);
             this.textBoxKraftstoff.MaxLength = 20;
             this.textBoxKraftstoff.Name = "textBoxKraftstoff";
             this.textBoxKraftstoff.ReadOnly = true;
@@ -250,11 +250,12 @@
             // 
             // labelHeadline
             // 
+            this.labelHeadline.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.labelHeadline.AutoSize = true;
             this.labelHeadline.BackColor = System.Drawing.Color.LightYellow;
             this.labelHeadline.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHeadline.ForeColor = System.Drawing.Color.DarkMagenta;
-            this.labelHeadline.Location = new System.Drawing.Point(12, 9);
+            this.labelHeadline.Location = new System.Drawing.Point(13, 9);
             this.labelHeadline.Name = "labelHeadline";
             this.labelHeadline.Size = new System.Drawing.Size(210, 24);
             this.labelHeadline.TabIndex = 40;
@@ -265,7 +266,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightYellow;
-            this.ClientSize = new System.Drawing.Size(328, 367);
+            this.ClientSize = new System.Drawing.Size(318, 361);
             this.Controls.Add(this.labelHeadline);
             this.Controls.Add(this.textBoxKraftstoff);
             this.Controls.Add(this.textBoxPreis);
