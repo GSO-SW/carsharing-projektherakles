@@ -79,6 +79,11 @@ namespace Project_Herakles
             listBoxFahrzeuge.DataSource = fahrzeuge;
             listBoxFahrzeuge.DisplayMember = "modell,FahrzeugID ";
         }
+
+        private void buttonFahrzeugDetails_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
