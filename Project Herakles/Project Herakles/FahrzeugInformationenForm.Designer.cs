@@ -70,6 +70,7 @@
             this.buttonAbbrechen.TabIndex = 1;
             this.buttonAbbrechen.Text = "Abbrechen";
             this.buttonAbbrechen.UseVisualStyleBackColor = true;
+            this.buttonAbbrechen.Click += new System.EventHandler(this.buttonAbbrechen_Click);
             // 
             // textBoxPreis
             // 
