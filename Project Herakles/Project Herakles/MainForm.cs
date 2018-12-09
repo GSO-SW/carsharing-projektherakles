@@ -75,9 +75,10 @@ namespace Project_Herakles
 
             DataTable fahrzeuge = fahrzeugSet.Tables[0];
            
-            //listBoxFahrzeuge.ValueMember = "modell";
+            
             listBoxFahrzeuge.DataSource = fahrzeuge;
-            listBoxFahrzeuge.DisplayMember = "modell,FahrzeugID ";
+            listBoxFahrzeuge.ValueMember = "modell";
+            listBoxFahrzeuge.DisplayMember = "modell";
         }
 
         private void buttonFahrzeugDetails_Click(object sender, EventArgs e)
