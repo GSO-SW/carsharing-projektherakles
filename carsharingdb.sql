@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 07. Dez 2018 um 17:20
--- Server-Version: 10.1.37-MariaDB
--- PHP-Version: 7.2.12
+-- Erstellungszeit: 13. Dez 2018 um 13:46
+-- Server-Version: 10.1.35-MariaDB
+-- PHP-Version: 7.2.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -16,7 +16,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES cp1257 */;
 
 --
 -- Datenbank: `carsharingdb`
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur fÃ¼r Tabelle `fahrt`
+-- Tabellenstruktur für Tabelle `fahrt`
 --
 
 CREATE TABLE `fahrt` (
@@ -40,7 +40,7 @@ CREATE TABLE `fahrt` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur fÃ¼r Tabelle `fahrzeug`
+-- Tabellenstruktur für Tabelle `fahrzeug`
 --
 
 CREATE TABLE `fahrzeug` (
@@ -50,16 +50,23 @@ CREATE TABLE `fahrzeug` (
   `Preis` double NOT NULL,
   `Standort` text COLLATE latin1_german1_ci NOT NULL,
   `Kennzeichen` text COLLATE latin1_german1_ci NOT NULL,
-  `TankgrÃ¶ÃŸe` double NOT NULL,
+  `Tankgröße` double NOT NULL,
   `Tankstand` double NOT NULL,
   `Verbrauch` double NOT NULL,
   `Kraftstoff` text COLLATE latin1_german1_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
 
+--
+-- Daten für Tabelle `fahrzeug`
+--
+
+INSERT INTO `fahrzeug` (`FahrzeugID`, `Modell`, `Hersteller`, `Preis`, `Standort`, `Kennzeichen`, `Tankgröße`, `Tankstand`, `Verbrauch`, `Kraftstoff`) VALUES
+(1, 'Golf', 'VW', 12, '!23 Köln', 'KSS33', 40, 20, 3, 'Elektro');
+
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur fÃ¼r Tabelle `kreditkarte`
+-- Tabellenstruktur für Tabelle `kreditkarte`
 --
 
 CREATE TABLE `kreditkarte` (
@@ -72,7 +79,7 @@ CREATE TABLE `kreditkarte` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur fÃ¼r Tabelle `paypal`
+-- Tabellenstruktur für Tabelle `paypal`
 --
 
 CREATE TABLE `paypal` (
@@ -84,7 +91,7 @@ CREATE TABLE `paypal` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur fÃ¼r Tabelle `rechte`
+-- Tabellenstruktur für Tabelle `rechte`
 --
 
 CREATE TABLE `rechte` (
@@ -93,7 +100,7 @@ CREATE TABLE `rechte` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
 
 --
--- Daten fÃ¼r Tabelle `rechte`
+-- Daten für Tabelle `rechte`
 --
 
 INSERT INTO `rechte` (`RechteID`, `Name`) VALUES
@@ -103,7 +110,7 @@ INSERT INTO `rechte` (`RechteID`, `Name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur fÃ¼r Tabelle `user`
+-- Tabellenstruktur für Tabelle `user`
 --
 
 CREATE TABLE `user` (
@@ -121,10 +128,17 @@ CREATE TABLE `user` (
   `LoginName` varchar(100) COLLATE latin1_german1_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
 
+--
+-- Daten für Tabelle `user`
+--
+
+INSERT INTO `user` (`AccountID`, `RechteID`, `Name`, `TelefonNr`, `EMail`, `Hausnummer`, `ORT`, `PLZ`, `Strasse`, `ZahlungsID`, `Passwort`, `LoginName`) VALUES
+(1, 2, '1', 1, '1', 1, '1', 1, '1', 0, '1', '1');
+
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur fÃ¼r Tabelle `zahlung`
+-- Tabellenstruktur für Tabelle `zahlung`
 --
 
 CREATE TABLE `zahlung` (
@@ -137,7 +151,7 @@ CREATE TABLE `zahlung` (
 --
 
 --
--- Indizes fÃ¼r die Tabelle `fahrt`
+-- Indizes für die Tabelle `fahrt`
 --
 ALTER TABLE `fahrt`
   ADD PRIMARY KEY (`FahrtID`),
@@ -145,33 +159,33 @@ ALTER TABLE `fahrt`
   ADD KEY `FahrzeugID` (`FahrzeugID`);
 
 --
--- Indizes fÃ¼r die Tabelle `fahrzeug`
+-- Indizes für die Tabelle `fahrzeug`
 --
 ALTER TABLE `fahrzeug`
   ADD PRIMARY KEY (`FahrzeugID`);
 
 --
--- Indizes fÃ¼r die Tabelle `kreditkarte`
+-- Indizes für die Tabelle `kreditkarte`
 --
 ALTER TABLE `kreditkarte`
   ADD PRIMARY KEY (`KreditkarteID`),
   ADD UNIQUE KEY `ZahlungID` (`ZahlungID`);
 
 --
--- Indizes fÃ¼r die Tabelle `paypal`
+-- Indizes für die Tabelle `paypal`
 --
 ALTER TABLE `paypal`
   ADD PRIMARY KEY (`PaypalAccountID`),
   ADD UNIQUE KEY `ZahlungID` (`ZahlungID`);
 
 --
--- Indizes fÃ¼r die Tabelle `rechte`
+-- Indizes für die Tabelle `rechte`
 --
 ALTER TABLE `rechte`
   ADD PRIMARY KEY (`RechteID`);
 
 --
--- Indizes fÃ¼r die Tabelle `user`
+-- Indizes für die Tabelle `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`AccountID`),
@@ -182,50 +196,50 @@ ALTER TABLE `user`
   ADD UNIQUE KEY `LoginName` (`LoginName`);
 
 --
--- Indizes fÃ¼r die Tabelle `zahlung`
+-- Indizes für die Tabelle `zahlung`
 --
 ALTER TABLE `zahlung`
   ADD PRIMARY KEY (`ZahlungID`);
 
 --
--- AUTO_INCREMENT fÃ¼r exportierte Tabellen
+-- AUTO_INCREMENT für exportierte Tabellen
 --
 
 --
--- AUTO_INCREMENT fÃ¼r Tabelle `fahrt`
+-- AUTO_INCREMENT für Tabelle `fahrt`
 --
 ALTER TABLE `fahrt`
   MODIFY `FahrtID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT fÃ¼r Tabelle `fahrzeug`
+-- AUTO_INCREMENT für Tabelle `fahrzeug`
 --
 ALTER TABLE `fahrzeug`
-  MODIFY `FahrzeugID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `FahrzeugID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT fÃ¼r Tabelle `kreditkarte`
+-- AUTO_INCREMENT für Tabelle `kreditkarte`
 --
 ALTER TABLE `kreditkarte`
   MODIFY `KreditkarteID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT fÃ¼r Tabelle `paypal`
+-- AUTO_INCREMENT für Tabelle `paypal`
 --
 ALTER TABLE `paypal`
   MODIFY `PaypalAccountID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT fÃ¼r Tabelle `rechte`
+-- AUTO_INCREMENT für Tabelle `rechte`
 --
 ALTER TABLE `rechte`
   MODIFY `RechteID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT fÃ¼r Tabelle `user`
+-- AUTO_INCREMENT für Tabelle `user`
 --
 ALTER TABLE `user`
-  MODIFY `AccountID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `AccountID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints der exportierten Tabellen
